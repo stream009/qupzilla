@@ -43,7 +43,8 @@
 ** contact Nokia at qt-info@nokia.com.
 **
 ****************************************************************************/
-
+#ifndef QTSINGLEAPPLICATION_H
+#define QTSINGLEAPPLICATION_H
 
 #include <QApplication>
 
@@ -100,3 +101,5 @@ private:
     QtLocalPeer* peer;
     QWidget* actWin;
 };
+
+#endif // QTSINGLEAPPLICATION_H
