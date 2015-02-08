@@ -44,6 +44,8 @@ public:
     QUrl url() const;
     void setUrl(const QUrl &url);
 
+    QString urlString() const;
+
     QNetworkRequest networkRequest() const;
     void setNetworkRequest(const QNetworkRequest &req);
 

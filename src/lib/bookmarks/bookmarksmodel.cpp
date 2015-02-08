@@ -202,7 +202,7 @@ QMimeData* BookmarksModel::mimeData(const QModelIndexList &indexes) const
     foreach (const QModelIndex &index, indexes) {
         // If item's parent (=folder) is also selected, we will just move the whole folder
         if (index.isValid() && index.column() == 0 && !indexes.contains(index.parent())) {
-            stream << index.row() << (quint32) index.internalId();
+            stream << index.row() << (quintptr) index.internalPointer();
         }
     }
 
@@ -231,9 +231,11 @@ bool BookmarksModel::dropMimeData(const QMimeData* data, Qt::DropAction action, 
 
     while (!stream.atEnd()) {
         int row;
-        quint32 id;
-        stream >> row >> id;
-        QModelIndex index = createIndex(row, 0, id);
+        quintptr ptr;
+
+        stream >> row >> ptr;
+
+        QModelIndex index = createIndex(row, 0, (void*) ptr);
         BookmarkItem* itm = item(index);
 
         Q_ASSERT(index.isValid());

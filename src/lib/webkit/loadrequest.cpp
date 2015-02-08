@@ -67,6 +67,11 @@ void LoadRequest::setUrl(const QUrl &url)
     m_request.setUrl(url);
 }
 
+QString LoadRequest::urlString() const
+{
+    return QUrl::fromPercentEncoding(m_request.url().toEncoded());
+}
+
 QNetworkRequest LoadRequest::networkRequest() const
 {
     return m_request;

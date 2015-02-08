@@ -31,6 +31,7 @@
 #include "settings.h"
 #include "qzsettings.h"
 #include "enhancedmenu.h"
+#include "locationbar.h"
 
 #ifdef USE_HUNSPELL
 #include "qtwebkit/spellcheck/speller.h"
@@ -133,12 +134,8 @@ QUrl WebView::url() const
 {
     QUrl returnUrl = page()->url();
 
-    if (returnUrl.isEmpty()) {
+    if (LocationBar::convertUrlToText(returnUrl).isEmpty()) {
         returnUrl = m_aboutToLoadUrl;
-    }
-
-    if (returnUrl.toString() == QLatin1String("about:blank")) {
-        returnUrl = QUrl();
     }
 
     return returnUrl;
@@ -208,7 +205,7 @@ void WebView::load(const LoadRequest &request)
         return;
     }
 
-    const LoadRequest searchRequest = mApp->searchEnginesManager()->searchResult(reqUrl.toString());
+    const LoadRequest searchRequest = mApp->searchEnginesManager()->searchResult(request.urlString());
     loadRequest(searchRequest);
 }
 
@@ -404,7 +401,8 @@ void WebView::editDelete()
 void WebView::reload()
 {
     m_isReloading = true;
-    if (QWebView::url().isEmpty() && !m_aboutToLoadUrl.isEmpty()) {
+
+    if (LocationBar::convertUrlToText(QWebView::url()).isEmpty() && !m_aboutToLoadUrl.isEmpty()) {
         load(m_aboutToLoadUrl);
         return;
     }
@@ -1399,6 +1397,45 @@ void WebView::keyPressEvent(QKeyEvent* event)
                 return;
             }
         }
+    }
+
+    switch (eventKey) {
+    case Qt::Key_ZoomIn:
+        zoomIn();
+        event->accept();
+        return;
+
+    case Qt::Key_ZoomOut:
+        zoomOut();
+        event->accept();
+        return;
+
+    case Qt::Key_Plus:
+        if (event->modifiers() & Qt::ControlModifier) {
+            zoomIn();
+            event->accept();
+            return;
+        }
+        break;
+
+    case Qt::Key_Minus:
+        if (event->modifiers() & Qt::ControlModifier) {
+            zoomOut();
+            event->accept();
+            return;
+        }
+        break;
+
+    case Qt::Key_0:
+        if (event->modifiers() & Qt::ControlModifier) {
+            zoomReset();
+            event->accept();
+            return;
+        }
+        break;
+
+    default:
+        break;
     }
 
     // Text navigation is handled automatically in editable elements

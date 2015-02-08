@@ -208,11 +208,11 @@ LoadRequest LocationBar::createLoadRequest() const
     return req;
 }
 
-QString LocationBar::convertUrlToText(const QUrl &url) const
+QString LocationBar::convertUrlToText(const QUrl &url)
 {
     // It was most probably entered by user, so don't urlencode it
     if (url.scheme().isEmpty()) {
-        return url.toString();
+        return QUrl::fromPercentEncoding(url.toEncoded());
     }
 
     QString stringUrl = QzTools::urlEncodeQueryString(url);
@@ -334,7 +334,7 @@ void LocationBar::showUrl(const QUrl &url)
     }
 
     // Set converted url as text
-    setText(convertUrlToText(url));
+    setText(stringUrl);
 
     // Move cursor to the start
     home(false);

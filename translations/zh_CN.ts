@@ -12,44 +12,44 @@
         <translation>作者</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="56"/>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="66"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="58"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="68"/>
         <source>Authors and Contributors</source>
         <translation>作者及贡献者</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="59"/>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="88"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="61"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="90"/>
         <source>&lt; About QupZilla</source>
         <translation>&lt; 关于 QupZilla</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="69"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="71"/>
         <source>&lt;p&gt;&lt;b&gt;Application version %1&lt;/b&gt;&lt;br/&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;程序版本 %1&lt;/b&gt;&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="76"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="78"/>
         <source>&lt;b&gt;WebKit version %1&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;b&gt;WebKit 版本 %1&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="78"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="80"/>
         <source>&lt;small&gt;Build time: %1 &lt;/small&gt;&lt;/p&gt;</source>
         <translation>&lt;small&gt;构建时间：%1&lt;/small&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="91"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="93"/>
         <source>&lt;p&gt;&lt;b&gt;Main developer:&lt;/b&gt;&lt;br/&gt;%1 &amp;lt;%2&amp;gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;主要开发人员：&lt;/b&gt;&lt;br/&gt;%1 &amp;lt;%2&amp;gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="92"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="94"/>
         <source>&lt;p&gt;&lt;b&gt;Contributors:&lt;/b&gt;&lt;br/&gt;%1&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;贡献人员：&lt;/b&gt;&lt;br/&gt;%1&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/aboutdialog.cpp" line="103"/>
+        <location filename="../src/lib/other/aboutdialog.cpp" line="105"/>
         <source>&lt;p&gt;&lt;b&gt;Translators:&lt;/b&gt;&lt;br/&gt;%1&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;翻译人员：&lt;/b&gt;&lt;br/&gt;%1&lt;/p&gt;</translation>
     </message>
@@ -82,8 +82,8 @@
         <translation>下移</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/acceptlanguage.cpp" line="96"/>
-        <location filename="../src/lib/preferences/acceptlanguage.cpp" line="157"/>
+        <location filename="../src/lib/preferences/acceptlanguage.cpp" line="98"/>
+        <location filename="../src/lib/preferences/acceptlanguage.cpp" line="159"/>
         <source>Personal [%1]</source>
         <translation>自定义 [%1]</translation>
     </message>
@@ -119,7 +119,7 @@
 <context>
     <name>AdBlockCustomList</name>
     <message>
-        <location filename="../src/lib/adblock/adblocksubscription.cpp" line="503"/>
+        <location filename="../src/lib/adblock/adblocksubscription.cpp" line="300"/>
         <source>Custom Rules</source>
         <translation>自定义规则</translation>
     </message>
@@ -249,7 +249,7 @@
 <context>
     <name>AdBlockManager</name>
     <message>
-        <location filename="../src/lib/adblock/adblockmanager.cpp" line="262"/>
+        <location filename="../src/lib/adblock/adblockmanager.cpp" line="260"/>
         <source>EasyList</source>
         <translation>EasyList</translation>
     </message>
@@ -267,7 +267,7 @@
 <context>
     <name>AdBlockSubscription</name>
     <message>
-        <location filename="../src/lib/adblock/adblocksubscription.cpp" line="174"/>
+        <location filename="../src/lib/adblock/adblocksubscription.cpp" line="172"/>
         <source>Cannot load subscription!</source>
         <translation>无法加载规则列表订阅！</translation>
     </message>
@@ -863,11 +863,6 @@ Please install latest version of QupZilla.</source>
         <translation>目录不存在。</translation>
     </message>
     <message>
-        <location filename="../src/lib/bookmarks/bookmarksimport/ieimporter.cpp" line="62"/>
-        <source>The directory does not contain any bookmarks.</source>
-        <translation>此目录不包含书签。</translation>
-    </message>
-    <message>
         <location filename="../src/lib/bookmarks/bookmarksimport/operaimporter.cpp" line="35"/>
         <source>Opera stores its bookmarks in &lt;b&gt;bookmarks.adr&lt;/b&gt; text file. This file is usually located in</source>
         <translation>Opera 的书签文件通常位于 &lt;b&gt;bookmarks.adr&lt;/b&gt; 文本文件。该文件通常位于</translation>
@@ -1070,94 +1065,94 @@ Please install latest version of QupZilla.</source>
 <context>
     <name>BrowserWindow</name>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="125"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="132"/>
         <source>QupZilla</source>
         <translation>QupZilla</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="335"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="347"/>
         <source>IP Address of current page</source>
         <translation>当前站点 IP 地址</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="647"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="661"/>
         <source> (Private Browsing)</source>
         <translation>（隐私模式）</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="899"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="913"/>
         <source>%1 - QupZilla</source>
         <translation>%1 - QupZilla</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="960"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="974"/>
         <source>&amp;Menu Bar</source>
         <translation>菜单栏 (&amp;M)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="965"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="979"/>
         <source>&amp;Navigation Toolbar</source>
         <translation>导航工具栏 (&amp;N)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="969"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="983"/>
         <source>&amp;Bookmarks Toolbar</source>
         <translation>书签工具栏 (&amp;B)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="975"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="989"/>
         <source>&amp;Tabs on Top</source>
         <translation>标签页置于顶端 (&amp;T)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="1024"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1038"/>
         <source>Other</source>
         <translation>其他</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="1071"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1085"/>
         <source>HTML files</source>
         <translation>HTML 文件</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="1071"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1085"/>
         <source>Image files</source>
         <translation>图片文件</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="1071"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1085"/>
         <source>Text files</source>
         <translation>文本文件</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="1071"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1085"/>
         <source>All files</source>
         <translation>所有文件</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="1073"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1087"/>
         <source>Open file...</source>
         <translation>打开文件…</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="1182"/>
-        <location filename="../src/lib/other/pagescreen.cpp" line="169"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1201"/>
+        <location filename="../src/lib/other/pagescreen.cpp" line="170"/>
         <source>QupZilla %1 (%2)</source>
         <translation>QupZilla %1 (%2)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/lib/app/browserwindow.cpp" line="1438"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1455"/>
         <source>There are still %n open tabs and your session won't be stored. 
 Are you sure to close this window?</source>
-        <translation type="unfinished"><numerusform></numerusform></translation>
+        <translation><numerusform>仍有 %n 个标签页被打开且当前会话不会被保存。你确定要关闭这个窗口吗？</numerusform></translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="1439"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1456"/>
         <source>Don&apos;t ask again</source>
         <translation>不要再询问</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/browserwindow.cpp" line="1440"/>
+        <location filename="../src/lib/app/browserwindow.cpp" line="1457"/>
         <source>There are still open tabs</source>
         <translation>还有很多未关闭的标签页</translation>
     </message>
@@ -1276,12 +1271,12 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/other/clearprivatedata.ui" line="43"/>
         <source>Checked items will be cleared upon clicking the Clear button.</source>
-        <translation type="unfinished"/>
+        <translation>按下“清除”按钮后，选中的项目将被清除。</translation>
     </message>
     <message>
         <location filename="../src/lib/other/clearprivatedata.ui" line="50"/>
         <source>Visited pages history from:</source>
-        <translation type="unfinished"/>
+        <translation>从此处开始的页面浏览记录：</translation>
     </message>
     <message>
         <location filename="../src/lib/other/clearprivatedata.ui" line="64"/>
@@ -1365,17 +1360,17 @@ Are you sure to close this window?</source>
         <translation>清除</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/clearprivatedata.cpp" line="165"/>
+        <location filename="../src/lib/other/clearprivatedata.cpp" line="167"/>
         <source>Done</source>
         <translation>完成</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/clearprivatedata.cpp" line="183"/>
+        <location filename="../src/lib/other/clearprivatedata.cpp" line="194"/>
         <source>Database Optimized</source>
         <translation>数据库已经优化</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/clearprivatedata.cpp" line="183"/>
+        <location filename="../src/lib/other/clearprivatedata.cpp" line="194"/>
         <source>Database successfully optimized.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Database Size Before: &lt;/b&gt;%1&lt;br/&gt;&lt;b&gt;Database Size After: &lt;/b&gt;%2</source>
         <translation>成功优化了数据库。.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;优化前数据库大小：&lt;/b&gt;%1&lt;br/&gt;&lt;b&gt;优化后大小：&lt;/b&gt;%2</translation>
     </message>
@@ -1467,8 +1462,8 @@ Are you sure to close this window?</source>
     </message>
     <message>
         <location filename="../src/lib/cookies/cookiemanager.ui" line="114"/>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="250"/>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="265"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="270"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="293"/>
         <source>Server:</source>
         <translation>服务器：</translation>
     </message>
@@ -1494,12 +1489,12 @@ Are you sure to close this window?</source>
         <location filename="../src/lib/cookies/cookiemanager.ui" line="172"/>
         <location filename="../src/lib/cookies/cookiemanager.ui" line="182"/>
         <location filename="../src/lib/cookies/cookiemanager.ui" line="192"/>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="147"/>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="148"/>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="149"/>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="150"/>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="151"/>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="152"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="167"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="168"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="169"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="170"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="171"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="172"/>
         <source>&lt;cookie not selected&gt;</source>
         <translation>〈没有选择 Cookie〉</translation>
     </message>
@@ -1510,148 +1505,175 @@ Are you sure to close this window?</source>
     </message>
     <message>
         <location filename="../src/lib/cookies/cookiemanager.ui" line="224"/>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="154"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="174"/>
         <source>Remove cookies</source>
         <translation>删除 Cookie</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="248"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="231"/>
+        <source>Remove and block domain</source>
+        <translation>移除并阻止域</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="255"/>
         <source>Cookie Filtering</source>
         <translation>过滤 Cookie</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="254"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="261"/>
         <source>&lt;b&gt;Cookie whitelist&lt;/b&gt;</source>
         <translation>&lt;b&gt;Cookie 白名单&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="261"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="268"/>
         <source>Cookies from these servers will ALWAYS be accepted (even if you have disabled saving cookies)</source>
         <translation>总是接受这些服务器的 Cookie（即使您已禁用保存 Cookie）</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="286"/>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="340"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="293"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="347"/>
         <source>Add</source>
         <translation>添加</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="293"/>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="347"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="300"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="354"/>
         <source>Remove</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="305"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="312"/>
         <source>&lt;b&gt;Cookie blacklist&lt;/b&gt;</source>
         <translation>&lt;b&gt;Cookie 黑名单&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="312"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="319"/>
         <source>Cookies from these servers will NEVER be accepted</source>
         <translation>永远&lt;B&gt;不&lt;/B&gt;接受这些服务器的 Cookie</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="364"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="371"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="370"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="377"/>
         <source>&lt;b&gt;Cookie Settings&lt;/b&gt;</source>
         <translation>&lt;b&gt;Cookie 设置&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="377"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="384"/>
         <source>Allow storing of cookies</source>
         <translation>允许储存 Cookie</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="416"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="423"/>
         <source>Delete cookies on close</source>
         <translation>关闭时清除 Cookie</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="436"/>
-        <source>Filter 3rd party cookies:</source>
-        <translation>过滤第三方 Cookie：</translation>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="443"/>
+        <source>Allow 3rd party cookies:</source>
+        <translation>允许第三方 Cookies : </translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="443"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="450"/>
         <source>Filter tracking cookies</source>
         <translation>过滤 Tracking Cookie（跟踪 Cookie）</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="463"/>
-        <source>&lt;b&gt;Warning:&lt;/b&gt; Filter 3rd party and tracking cookies options can lead to deny some cookies from sites. If you have problems with cookies, try to disable these options first!</source>
-        <translation type="unfinished"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="470"/>
+        <source>&lt;b&gt;Warning:&lt;/b&gt; Allow 3rd party and tracking cookies options can lead to deny some cookies from sites. If you have problems with cookies, try to disable these options first!</source>
+        <translation>&lt;b&gt;警告：&lt;/b&gt;允许第三方以及跟踪型 Cookies 可能导致一些站点的 Cookies 被阻止。如果你仍被 Cookie 相关问题困扰，首先尝试关闭这些选项！</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="480"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="487"/>
         <source>&lt;p&gt;&lt;b&gt;Always:&lt;/b&gt; Allow third-party resources to set and retrieve cookies.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Never:&lt;/b&gt; Never allow third-party resources to set and retrieve cookies.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Keep existing:&lt;/b&gt; If the cookie jar already contains cookies from a third-party, allow it to set and retrieve new and existing cookies.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;p&gt;&lt;b&gt;总是：&lt;/b&gt;允许第三方资源设置并获取 Cookies。&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;从不：&lt;/b&gt;从不允许第三方资源设置并获取 Cookies。&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;保持现存：&lt;/b&gt;如果当前的 Cookie 容器已经存放一些来自第三方的 Cookies，允许其设置并获取新的或现存的 Cookies。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="486"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="493"/>
         <source>Always</source>
         <translation>始终</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="491"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="498"/>
         <source>Never</source>
         <translation>从不</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.ui" line="496"/>
+        <location filename="../src/lib/cookies/cookiemanager.ui" line="503"/>
         <source>Keep existing</source>
         <translation>保持现有</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="80"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="85"/>
         <source>Search</source>
         <translation>输入查找内容</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="94"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="101"/>
         <source>Confirmation</source>
         <translation>请确认</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="95"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="102"/>
         <source>Are you sure to delete all cookies on your computer?</source>
         <translation>您确定要删除本浏览器中的所有 Cookie 吗？</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="164"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="184"/>
         <source>Secure only</source>
         <translation>只显示安全的</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="164"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="184"/>
         <source>All connections</source>
         <translation>所有连接</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="165"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="185"/>
         <source>Session cookie</source>
         <translation>临时 Cookie</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="167"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="187"/>
         <source>Remove cookie</source>
         <translation>删除 Cookie</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="250"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="270"/>
         <source>Add to whitelist</source>
         <translation>添加到白名单</translation>
     </message>
     <message>
-        <location filename="../src/lib/cookies/cookiemanager.cpp" line="265"/>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="277"/>
+        <source>Already blacklisted!</source>
+        <translation>已添加到黑名单！</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="277"/>
+        <source>The server &quot;%1&quot; is already in blacklist, please remove it first.</source>
+        <translation>服务器 &quot;%1&quot; 已经存在于黑名单中，请先移除它。</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="293"/>
         <source>Add to blacklist</source>
         <translation>添加到黑名单</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="304"/>
+        <source>Already whitelisted!</source>
+        <translation>已添加到白名单！</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/cookies/cookiemanager.cpp" line="304"/>
+        <source>The server &quot;%1&quot; is already in whitelist, please remove it first.</source>
+        <translation>服务器 &quot;%1&quot; 已经存在于白名单中，请先移除它。</translation>
     </message>
 </context>
 <context>
@@ -1822,8 +1844,8 @@ Are you sure to close this window?</source>
     <name>DownloadManager</name>
     <message>
         <location filename="../src/lib/downloads/downloadmanager.ui" line="20"/>
-        <location filename="../src/lib/downloads/downloadmanager.cpp" line="143"/>
-        <location filename="../src/lib/downloads/downloadmanager.cpp" line="280"/>
+        <location filename="../src/lib/downloads/downloadmanager.cpp" line="148"/>
+        <location filename="../src/lib/downloads/downloadmanager.cpp" line="285"/>
         <source>Download Manager</source>
         <translation>下载管理器</translation>
     </message>
@@ -1833,32 +1855,32 @@ Are you sure to close this window?</source>
         <translation>清理</translation>
     </message>
     <message>
-        <location filename="../src/lib/downloads/downloadmanager.cpp" line="177"/>
+        <location filename="../src/lib/downloads/downloadmanager.cpp" line="182"/>
         <source>%1% of %2 files (%3) %4 remaining</source>
         <translation>%2个文件中的%1%（当前速率%3）剩余时间%4</translation>
     </message>
     <message>
-        <location filename="../src/lib/downloads/downloadmanager.cpp" line="180"/>
+        <location filename="../src/lib/downloads/downloadmanager.cpp" line="185"/>
         <source>%1% - Download Manager</source>
         <translation>%1%－下载管理器</translation>
     </message>
     <message>
-        <location filename="../src/lib/downloads/downloadmanager.cpp" line="273"/>
+        <location filename="../src/lib/downloads/downloadmanager.cpp" line="278"/>
         <source>Download Finished</source>
         <translation>下载完成</translation>
     </message>
     <message>
-        <location filename="../src/lib/downloads/downloadmanager.cpp" line="273"/>
+        <location filename="../src/lib/downloads/downloadmanager.cpp" line="278"/>
         <source>All files have been successfully downloaded.</source>
         <translation>所有文件均已成功下载。</translation>
     </message>
     <message>
-        <location filename="../src/lib/downloads/downloadmanager.cpp" line="330"/>
+        <location filename="../src/lib/downloads/downloadmanager.cpp" line="335"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../src/lib/downloads/downloadmanager.cpp" line="331"/>
+        <location filename="../src/lib/downloads/downloadmanager.cpp" line="336"/>
         <source>Are you sure to quit? All uncompleted downloads will be cancelled!</source>
         <translation>下载未完成，您确定要退出吗？未完成的下载将被取消！</translation>
     </message>
@@ -2006,7 +2028,7 @@ Are you sure to close this window?</source>
 <context>
     <name>FtpDownloader</name>
     <message>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="468"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="498"/>
         <source>Cancelled!</source>
         <translation>已取消！</translation>
     </message>
@@ -2014,43 +2036,43 @@ Are you sure to close this window?</source>
 <context>
     <name>FtpSchemeReply</name>
     <message>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="256"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="286"/>
         <source>Up to higher level directory</source>
         <translation>上级目录</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="257"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="287"/>
         <source>Show hidden files</source>
         <translation>显示隐藏文件</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="258"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="288"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="259"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="289"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="260"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="290"/>
         <source>Last modified</source>
         <translation>最后修改</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="274"/>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="275"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="304"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="305"/>
         <source>Index for %1</source>
         <translation>%1 的索引</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="338"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="368"/>
         <source>Folder is empty.</source>
         <translation>文件夹是空的。</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="410"/>
+        <location filename="../src/lib/network/schemehandlers/ftpschemehandler.cpp" line="440"/>
         <source>Unknown command</source>
         <translation>未知命令</translation>
     </message>
@@ -2091,14 +2113,14 @@ Are you sure to close this window?</source>
         <translation>地理位置</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/html5permissions/html5permissionsdialog.cpp" line="35"/>
-        <location filename="../src/lib/tools/html5permissions/html5permissionsdialog.cpp" line="53"/>
+        <location filename="../src/lib/tools/html5permissions/html5permissionsdialog.cpp" line="37"/>
+        <location filename="../src/lib/tools/html5permissions/html5permissionsdialog.cpp" line="55"/>
         <source>Allow</source>
         <translation>允许 (&amp;A)</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/html5permissions/html5permissionsdialog.cpp" line="44"/>
-        <location filename="../src/lib/tools/html5permissions/html5permissionsdialog.cpp" line="62"/>
+        <location filename="../src/lib/tools/html5permissions/html5permissionsdialog.cpp" line="46"/>
+        <location filename="../src/lib/tools/html5permissions/html5permissionsdialog.cpp" line="64"/>
         <source>Deny</source>
         <translation>拒绝 (&amp;D)</translation>
     </message>
@@ -2141,7 +2163,7 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/history/history.cpp" line="80"/>
         <source>Empty Page</source>
-        <translation>清空页面</translation>
+        <translation>清空页面空白页</translation>
     </message>
     <message>
         <location filename="../src/lib/history/history.cpp" line="269"/>
@@ -2264,7 +2286,7 @@ Are you sure to close this window?</source>
         <location filename="../src/lib/history/historymenu.cpp" line="141"/>
         <location filename="../src/lib/history/historymenu.cpp" line="165"/>
         <source>Empty</source>
-        <translation type="unfinished"/>
+        <translation>空</translation>
     </message>
     <message>
         <location filename="../src/lib/history/historymenu.cpp" line="169"/>
@@ -2477,60 +2499,68 @@ Are you sure to close this window?</source>
 <context>
     <name>LineEdit</name>
     <message>
-        <location filename="../src/lib/3rdparty/lineedit.cpp" line="123"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="93"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="178"/>
         <source>&amp;Undo</source>
         <translation>撤消 (&amp;U)</translation>
     </message>
     <message>
-        <location filename="../src/lib/3rdparty/lineedit.cpp" line="127"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="98"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="182"/>
         <source>&amp;Redo</source>
         <translation>重做 (&amp;R)</translation>
     </message>
     <message>
-        <location filename="../src/lib/3rdparty/lineedit.cpp" line="136"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="103"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="191"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"/>
+        <translation>剪切 (&amp;t)</translation>
     </message>
     <message>
-        <location filename="../src/lib/3rdparty/lineedit.cpp" line="141"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="108"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="196"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"/>
+        <translation>复制 (&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/lib/3rdparty/lineedit.cpp" line="146"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="113"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="201"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"/>
+        <translation>粘贴 (&amp;P)</translation>
     </message>
     <message>
-        <location filename="../src/lib/3rdparty/lineedit.cpp" line="156"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="118"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="211"/>
         <source>Delete</source>
-        <translation type="unfinished"/>
+        <translation>删除</translation>
     </message>
     <message>
-        <location filename="../src/lib/3rdparty/lineedit.cpp" line="160"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="121"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="215"/>
         <source>Clear All</source>
-        <translation type="unfinished"/>
+        <translation>全部清除</translation>
     </message>
     <message>
-        <location filename="../src/lib/3rdparty/lineedit.cpp" line="168"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="124"/>
+        <location filename="../src/lib/3rdparty/lineedit.cpp" line="223"/>
         <source>Select All</source>
-        <translation type="unfinished"/>
+        <translation>全选</translation>
     </message>
 </context>
 <context>
     <name>LocationBar</name>
     <message>
-        <location filename="../src/lib/navigation/locationbar.cpp" line="145"/>
+        <location filename="../src/lib/navigation/locationbar.cpp" line="149"/>
         <source>Enter URL address or search on %1</source>
         <translation>输入网址或在 %1 上搜索</translation>
     </message>
     <message>
-        <location filename="../src/lib/navigation/locationbar.cpp" line="365"/>
+        <location filename="../src/lib/navigation/locationbar.cpp" line="372"/>
         <source>Paste And &amp;Go</source>
         <translation>粘贴并转到 (&amp;G)</translation>
     </message>
     <message>
-        <location filename="../src/lib/navigation/locationbar.cpp" line="535"/>
+        <location filename="../src/lib/navigation/locationbar.cpp" line="537"/>
         <source>.co.uk</source>
         <comment>Append domain name on ALT + Enter = Should be different for every country</comment>
         <translation>.com.cn</translation>
@@ -2552,22 +2582,22 @@ Are you sure to close this window?</source>
 <context>
     <name>MainApplication</name>
     <message>
-        <location filename="../src/lib/app/mainapplication.cpp" line="1051"/>
+        <location filename="../src/lib/app/mainapplication.cpp" line="1067"/>
         <source>QupZilla is not currently your default browser. Would you like to make it your default browser?</source>
         <translation>QupZilla 不是您的默认浏览器，是否将其设为您的默认浏览器？</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainapplication.cpp" line="1052"/>
+        <location filename="../src/lib/app/mainapplication.cpp" line="1068"/>
         <source>Always perform this check when starting QupZilla.</source>
         <translation>每次启动 QupZilla 时总是检查此设定。</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainapplication.cpp" line="1054"/>
+        <location filename="../src/lib/app/mainapplication.cpp" line="1070"/>
         <source>Default Browser</source>
         <translation>默认浏览器</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainapplication.cpp" line="1100"/>
+        <location filename="../src/lib/app/mainapplication.cpp" line="1116"/>
         <source>QupZilla is a new, fast and secure open-source WWW browser. QupZilla is licensed under GPL version 3 or (at your option) any later version. It is based on WebKit core and Qt Framework.</source>
         <translation>QupZilla 是新出、高速、安全的开源 WWW 浏览器。QupZilla 基于 GPL 协议第3版或（如果您需要）任何之后的版本。它使用 WebKit 排版引擎。</translation>
     </message>
@@ -2575,259 +2605,259 @@ Are you sure to close this window?</source>
 <context>
     <name>MainMenu</name>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="499"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="502"/>
         <source>&amp;About QupZilla</source>
-        <translation type="unfinished"/>
+        <translation>关于 Qupzilla (&amp;A)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="504"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="507"/>
         <source>Pr&amp;eferences</source>
-        <translation type="unfinished"/>
+        <translation>首选项 (&amp;e)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="510"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="513"/>
         <source>Quit</source>
-        <translation type="unfinished"/>
+        <translation>退出</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="517"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="520"/>
         <source>&amp;File</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="521"/>
-        <source>New Tab</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="522"/>
-        <source>&amp;New Window</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="523"/>
-        <source>New &amp;Private Window</source>
-        <translation type="unfinished"/>
+        <translation>文件 (&amp;F)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="524"/>
-        <source>Open Location</source>
-        <translation type="unfinished"/>
+        <source>New Tab</source>
+        <translation>新建标签页</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="525"/>
-        <source>Open &amp;File...</source>
-        <translation type="unfinished"/>
+        <source>&amp;New Window</source>
+        <translation>新建窗口 (&amp;N)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="526"/>
-        <source>Close Window</source>
-        <translation type="unfinished"/>
+        <source>New &amp;Private Window</source>
+        <translation>新建隐私窗口 (&amp;P)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="527"/>
+        <source>Open Location</source>
+        <translation>打开位置</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="528"/>
-        <source>&amp;Save Page As...</source>
-        <translation type="unfinished"/>
+        <source>Open &amp;File...</source>
+        <translation>打开文件  (&amp;F) …</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="529"/>
-        <source>Save Page Screen</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="530"/>
-        <source>Send Link...</source>
-        <translation type="unfinished"/>
+        <source>Close Window</source>
+        <translation>关闭窗口</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="531"/>
-        <source>&amp;Print...</source>
-        <translation type="unfinished"/>
+        <source>&amp;Save Page As...</source>
+        <translation>页面另存为  (&amp;S) …</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="532"/>
+        <source>Save Page Screen</source>
+        <translation>保存网页屏幕…</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="533"/>
+        <source>Send Link...</source>
+        <translation>发送链接…</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="534"/>
+        <source>&amp;Print...</source>
+        <translation>打印  (&amp;P) …</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="536"/>
         <source>Work &amp;Offline</source>
-        <translation type="unfinished"/>
+        <translation>脱机工作 (&amp;O)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="538"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="541"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="542"/>
-        <source>&amp;Undo</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="543"/>
-        <source>&amp;Redo</source>
-        <translation type="unfinished"/>
+        <translation>编辑  (&amp;E)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="545"/>
-        <source>&amp;Cut</source>
-        <translation type="unfinished"/>
+        <source>&amp;Undo</source>
+        <translation>撤消  (&amp;U)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="546"/>
-        <source>C&amp;opy</source>
-        <translation type="unfinished"/>
+        <source>&amp;Redo</source>
+        <translation>重做  (&amp;R)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="547"/>
-        <source>&amp;Paste</source>
-        <translation type="unfinished"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="548"/>
+        <source>&amp;Cut</source>
+        <translation>剪切  (&amp;C)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="549"/>
-        <source>Select &amp;All</source>
-        <translation type="unfinished"/>
+        <source>C&amp;opy</source>
+        <translation>复制  (&amp;o)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="550"/>
+        <source>&amp;Paste</source>
+        <translation>粘贴  (&amp;P)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="552"/>
+        <source>Select &amp;All</source>
+        <translation>全选  (&amp;A)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="553"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"/>
+        <translation>查找  (&amp;F)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="554"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="557"/>
         <source>&amp;View</source>
-        <translation type="unfinished"/>
+        <translation>查看  (&amp;V)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="558"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="561"/>
         <source>Toolbars</source>
-        <translation type="unfinished"/>
+        <translation>工具栏  (&amp;T)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="560"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="563"/>
         <source>Sidebar</source>
-        <translation type="unfinished"/>
+        <translation>侧栏 </translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="562"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="565"/>
         <source>Character &amp;Encoding</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="571"/>
-        <source>Sta&amp;tus Bar</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="573"/>
-        <source>&amp;Stop</source>
-        <translation type="unfinished"/>
+        <translation>字符编码  (&amp;E)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="574"/>
-        <source>&amp;Reload</source>
-        <translation type="unfinished"/>
+        <source>Sta&amp;tus Bar</source>
+        <translation>状态栏  (&amp;t)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="576"/>
-        <source>Zoom &amp;In</source>
-        <translation type="unfinished"/>
+        <source>&amp;Stop</source>
+        <translation>停止  (&amp;S)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="577"/>
-        <source>Zoom &amp;Out</source>
-        <translation type="unfinished"/>
+        <source>&amp;Reload</source>
+        <translation>重载  (&amp;R)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="578"/>
-        <source>Reset</source>
-        <translation type="unfinished"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="579"/>
+        <source>Zoom &amp;In</source>
+        <translation>放大  (&amp;I)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="580"/>
-        <source>&amp;Caret Browsing</source>
-        <translation type="unfinished"/>
+        <source>Zoom &amp;Out</source>
+        <translation>缩小  (&amp;O)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="581"/>
+        <source>Reset</source>
+        <translation>重置</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="583"/>
-        <source>&amp;Page Source</source>
-        <translation type="unfinished"/>
+        <source>&amp;Caret Browsing</source>
+        <translation>光标浏览  (&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="584"/>
-        <source>&amp;FullScreen</source>
-        <translation type="unfinished"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="586"/>
+        <source>&amp;Page Source</source>
+        <translation>页面源代码  (&amp;P)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="587"/>
+        <source>&amp;FullScreen</source>
+        <translation>全屏  (&amp;F)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="590"/>
         <source>&amp;Tools</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="591"/>
-        <source>&amp;Web Search</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="592"/>
-        <source>Site &amp;Info</source>
-        <translation type="unfinished"/>
+        <translation>工具  (&amp;T)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="594"/>
-        <source>&amp;Download Manager</source>
-        <translation type="unfinished"/>
+        <source>&amp;Web Search</source>
+        <translation>网页搜索  (&amp;W)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="595"/>
-        <source>&amp;Cookies Manager</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="596"/>
-        <source>&amp;AdBlock</source>
-        <translation type="unfinished"/>
+        <source>Site &amp;Info</source>
+        <translation>站点信息  (&amp;I)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="597"/>
-        <source>RSS &amp;Reader</source>
-        <translation type="unfinished"/>
+        <source>&amp;Download Manager</source>
+        <translation>下载管理器  (&amp;D)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="598"/>
-        <source>Web In&amp;spector</source>
-        <translation type="unfinished"/>
+        <source>&amp;Cookies Manager</source>
+        <translation>Cookie  管理器 (&amp;C)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="599"/>
-        <source>Clear Recent &amp;History</source>
-        <translation type="unfinished"/>
+        <source>&amp;AdBlock</source>
+        <translation>&amp;AdBlock</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="603"/>
-        <source>&amp;Help</source>
-        <translation type="unfinished"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="600"/>
+        <source>RSS &amp;Reader</source>
+        <translation>RSS 阅读器  (&amp;R)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="601"/>
+        <source>Web In&amp;spector</source>
+        <translation>网页检察器  (&amp;s)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="602"/>
+        <source>Clear Recent &amp;History</source>
+        <translation>清除最近历史记录  (&amp;H)</translation>
     </message>
     <message>
         <location filename="../src/lib/app/mainmenu.cpp" line="606"/>
+        <source>&amp;Help</source>
+        <translation>帮助  (&amp;H)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/app/mainmenu.cpp" line="609"/>
         <source>About &amp;Qt</source>
-        <translation type="unfinished"/>
+        <translation>关于 Qt (&amp;Q)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="611"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="614"/>
         <source>Information about application</source>
-        <translation type="unfinished"/>
+        <translation>应用程序信息</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="612"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="615"/>
         <source>Configuration Information</source>
-        <translation type="unfinished"/>
+        <translation>配置信息</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="613"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="616"/>
         <source>Report &amp;Issue</source>
-        <translation type="unfinished"/>
+        <translation>报告问题  (&amp;I)</translation>
     </message>
     <message>
-        <location filename="../src/lib/app/mainmenu.cpp" line="626"/>
+        <location filename="../src/lib/app/mainmenu.cpp" line="629"/>
         <source>Restore &amp;Closed Tab</source>
-        <translation type="unfinished"/>
+        <translation>还原关闭的标签页  (&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -2855,7 +2885,7 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/autofill/passwordbackends/masterpassworddialog.ui" line="46"/>
         <source>This option clears the master password and moves all encrypted data to the &quot;DataBase (Plain Text)&quot; backend, and switches to it.</source>
-        <translation type="unfinished"/>
+        <translation>此选项将清除主密码并移动所有加密数据到“数据库（纯文本）”后端，并将此作为默认后端。</translation>
     </message>
     <message>
         <location filename="../src/lib/autofill/passwordbackends/masterpassworddialog.ui" line="64"/>
@@ -2908,7 +2938,7 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/autofill/passwordbackends/databaseencryptedpasswordbackend.cpp" line="633"/>
         <source>Some data has not been decrypted. The master password was not cleared!</source>
-        <translation type="unfinished"/>
+        <translation>一些数据未被解密。主密码未被清除！</translation>
     </message>
 </context>
 <context>
@@ -2952,102 +2982,102 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/navigation/navigationbar.cpp" line="376"/>
         <source>Empty Page</source>
-        <translation type="unfinished"/>
+        <translation>空白页</translation>
     </message>
 </context>
 <context>
     <name>NetworkManager</name>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="226"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="220"/>
         <source>SSL Certificate Error!</source>
         <translation>SSL 证书错误！</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="227"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="221"/>
         <source>The page you are trying to access has the following errors in the SSL certificate:</source>
         <translation>您试图访问的网页有 SSL 证书错误：</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="242"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="236"/>
         <source>&lt;b&gt;Organization: &lt;/b&gt;</source>
         <translation>&lt;b&gt;机构：&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="244"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="238"/>
         <source>&lt;b&gt;Domain Name: &lt;/b&gt;</source>
         <translation>&lt;b&gt;域名：&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="246"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="240"/>
         <source>&lt;b&gt;Expiration Date: &lt;/b&gt;</source>
         <translation>&lt;b&gt;过期日期：&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="252"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="246"/>
         <source>&lt;b&gt;Error: &lt;/b&gt;</source>
         <translation>&lt;b&gt;错误：&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="260"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="254"/>
         <source>Would you like to make an exception for this certificate?</source>
         <translation>您想为这个证书添加例外吗？</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="300"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="294"/>
         <source>Authorisation required</source>
         <translation>要求授权</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="307"/>
-        <location filename="../src/lib/network/networkmanager.cpp" line="414"/>
-        <location filename="../src/lib/network/networkmanager.cpp" line="486"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="301"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="408"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="480"/>
         <source>Username: </source>
         <translation>用户名：</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="308"/>
-        <location filename="../src/lib/network/networkmanager.cpp" line="415"/>
-        <location filename="../src/lib/network/networkmanager.cpp" line="487"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="302"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="409"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="481"/>
         <source>Password: </source>
         <translation>密码：</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="313"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="307"/>
         <source>Save username and password on this site</source>
         <translation>保存您在本网站的用户名和密码</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="322"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="316"/>
         <source>A username and password are being requested by %1. The site says: &quot;%2&quot;</source>
         <translation>%1请求输入用户名和密码。该网站信息：“%2”</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="407"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="401"/>
         <source>FTP authorisation required</source>
         <translation>FTP 要求授权</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="420"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="414"/>
         <source>Login anonymously</source>
         <translation>匿名登录</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="437"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="431"/>
         <source>A username and password are being requested by %1:%2.</source>
         <translation>%1请求输入用户名和密码：%2。</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="479"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="473"/>
         <source>Proxy authorisation required</source>
         <translation>代理服务器要求授权</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="499"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="493"/>
         <source>Remember username and password for this proxy.</source>
         <translation>记住此代理的用户名和密码。</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/networkmanager.cpp" line="501"/>
+        <location filename="../src/lib/network/networkmanager.cpp" line="495"/>
         <source>A username and password are being requested by proxy %1. </source>
         <translation>代理“%1”要求用户名和密码。</translation>
     </message>
@@ -3075,22 +3105,22 @@ Are you sure to close this window?</source>
         <translation>浏览…</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/pagescreen.cpp" line="59"/>
+        <location filename="../src/lib/other/pagescreen.cpp" line="60"/>
         <source>Save as %1</source>
         <translation>另存为 %1</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/pagescreen.cpp" line="101"/>
+        <location filename="../src/lib/other/pagescreen.cpp" line="102"/>
         <source>Choose location...</source>
         <translation>选择位置…</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/pagescreen.cpp" line="112"/>
+        <location filename="../src/lib/other/pagescreen.cpp" line="113"/>
         <source>File &apos;%1&apos; already exists. Do you want to overwrite it?</source>
         <translation>文件“%1”已存在，您想覆盖掉它吗？</translation>
     </message>
     <message>
-        <location filename="../src/lib/other/pagescreen.cpp" line="113"/>
+        <location filename="../src/lib/other/pagescreen.cpp" line="114"/>
         <source>File already exists</source>
         <translation>文件已存在</translation>
     </message>
@@ -3161,12 +3191,12 @@ Are you sure to close this window?</source>
         <translation>不需要“http://”（如：youtube.com）</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/pluginsmanager.cpp" line="266"/>
+        <location filename="../src/lib/preferences/pluginsmanager.cpp" line="265"/>
         <source>Error!</source>
         <translation>出错！</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/pluginsmanager.cpp" line="266"/>
+        <location filename="../src/lib/preferences/pluginsmanager.cpp" line="265"/>
         <source>Cannot load extension!</source>
         <translation>无法加载扩展！</translation>
     </message>
@@ -3217,77 +3247,47 @@ Are you sure to close this window?</source>
         <translation>编辑[&amp;E]</translation>
     </message>
     <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="70"/>
-        <source>&amp;Undo</source>
-        <translation>撤消 (&amp;U)</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="71"/>
-        <source>&amp;Redo</source>
-        <translation>重做 (&amp;R)</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="73"/>
-        <source>&amp;Cut</source>
-        <translation>剪切 (&amp;t)</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="74"/>
-        <source>C&amp;opy</source>
-        <translation>复制 (&amp;C)</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="75"/>
-        <source>&amp;Paste</source>
-        <translation>粘贴 (&amp;P)</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="77"/>
-        <source>Select All</source>
-        <translation>全选 [&amp;A]</translation>
-    </message>
-    <message>
         <location filename="../src/lib/popupwindow/popupwindow.cpp" line="78"/>
         <source>Find</source>
         <translation>查找 [&amp;F]</translation>
     </message>
     <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="83"/>
+        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="81"/>
         <source>View</source>
         <translation>查看[&amp;V]</translation>
     </message>
     <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="84"/>
+        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="82"/>
         <source>&amp;Stop</source>
         <translation>停止 (&amp;S)</translation>
     </message>
     <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="86"/>
+        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="84"/>
         <source>&amp;Reload</source>
         <translation>刷新 (&amp;R)</translation>
     </message>
     <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="89"/>
+        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="87"/>
         <source>Zoom &amp;In</source>
         <translation>放大 (&amp;+)</translation>
     </message>
     <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="90"/>
+        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="88"/>
         <source>Zoom &amp;Out</source>
         <translation>缩小 (&amp;-)</translation>
     </message>
     <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="91"/>
+        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="89"/>
         <source>Reset</source>
         <translation>重置大小 (&amp;0)</translation>
     </message>
     <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="93"/>
+        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="91"/>
         <source>&amp;Page Source</source>
         <translation>源代码 (&amp;o)</translation>
     </message>
     <message>
-        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="260"/>
+        <location filename="../src/lib/popupwindow/popupwindow.cpp" line="232"/>
         <source>%1 - QupZilla</source>
         <translation>%1 - QupZilla</translation>
     </message>
@@ -3368,7 +3368,7 @@ Are you sure to close this window?</source>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="204"/>
-        <location filename="../src/lib/preferences/preferences.cpp" line="858"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="865"/>
         <source>Note: You cannot delete active profile.</source>
         <translation>注意：不能删除活动配置文件。</translation>
     </message>
@@ -3592,7 +3592,7 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="734"/>
         <source>Always switch between tabs with mouse wheel</source>
-        <translation type="unfinished"/>
+        <translation>总是使用鼠标滚轮切换标签页</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="741"/>
@@ -3602,7 +3602,7 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="748"/>
         <source>Don&apos;t close window upon closing last tab</source>
-        <translation type="unfinished"/>
+        <translation>关闭最后一个标签页后不退出</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="755"/>
@@ -3612,27 +3612,27 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="762"/>
         <source>Show closed tabs button</source>
-        <translation type="unfinished"/>
+        <translation>显示已关闭标签页按钮</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="771"/>
         <source>Show close buttons on inactive tabs:</source>
-        <translation type="unfinished"/>
+        <translation>在不活动的标签页上显示关闭按钮：</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="779"/>
         <source>Automatic</source>
-        <translation type="unfinished"/>
+        <translation>自动</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="784"/>
         <source>Always</source>
-        <translation type="unfinished"/>
+        <translation>总是</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="789"/>
         <source>Never</source>
-        <translation type="unfinished"/>
+        <translation>从不</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="829"/>
@@ -3667,17 +3667,17 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="892"/>
         <source>Enable inline suggestions</source>
-        <translation type="unfinished"/>
+        <translation>开启行内建议</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="899"/>
         <source>Press &quot;Shift&quot; to not switch the tab but load the url in the current tab</source>
-        <translation type="unfinished"/>
+        <translation>按住“Shift”键来在当前标签页中打开自动完成的 URL，而不切换标签页。</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="902"/>
         <source>Propose to switch tab if completed url is already loaded</source>
-        <translation type="unfinished"/>
+        <translation>当自动完成的 URL 已经在其它标签页载入时切换到该标签页。</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="909"/>
@@ -3809,12 +3809,12 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="1166"/>
         <source>If you disable this, it will still be accesible via standard Qt shortcuts</source>
-        <translation type="unfinished"/>
+        <translation>禁用此选项后，依然可以通过标准 Qt 快捷键来访问它</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="1169"/>
         <source>Enable Undo/Redo for editable forms</source>
-        <translation type="unfinished"/>
+        <translation>为可编辑表格开启 撤销/重做 功能</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="1186"/>
@@ -4057,22 +4057,22 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="1993"/>
         <source>Existing shortcuts:&lt;br/&gt;&lt;b&gt;1&lt;/b&gt; - previous tab&lt;br/&gt;&lt;b&gt;2&lt;/b&gt; - next tab&lt;br/&gt;&lt;b&gt;/&lt;/b&gt; - search on page</source>
-        <translation type="unfinished"/>
+        <translation>当前存在的快捷键：&lt;br/&gt;&lt;b&gt;1&lt;/b&gt; - 前一个标签页 &lt;br/&gt;&lt;b&gt;2&lt;/b&gt; - 下一个标签页 &lt;br/&gt;&lt;b&gt;/&lt;/b&gt; - 搜索当前页面</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="1996"/>
         <source>Use single key shortcuts</source>
-        <translation type="unfinished"/>
+        <translation>使用单键快捷方式</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="2003"/>
         <source>If unchecked, prevents accidental exit from the application if the Ctrl-W shortcut was intended.</source>
-        <translation type="unfinished"/>
+        <translation>如果取消选择，防止误触 Ctrl-W 导致应用程序退出。</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="2006"/>
         <source>Close application with Ctrl-Q</source>
-        <translation type="unfinished"/>
+        <translation>使用 Ctrl-Q 关闭应用程序</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="2030"/>
@@ -4259,17 +4259,17 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="2588"/>
         <source>&lt;b&gt;Manage search engines&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;管理搜索引擎&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="2595"/>
         <source>&lt;b&gt;User Style Sheet&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;用户定义的样式表&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="2602"/>
         <source>Style Sheet automatically loaded with all websites: </source>
-        <translation type="unfinished"/>
+        <translation>所有网站自动加载的  CSS  样式表：</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="2632"/>
@@ -4294,7 +4294,7 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="2757"/>
         <source>Search Engines Manager</source>
-        <translation type="unfinished"/>
+        <translation>搜索引擎管理器</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.ui" line="2794"/>
@@ -4303,7 +4303,7 @@ Are you sure to close this window?</source>
     </message>
     <message>
         <location filename="../src/lib/preferences/preferences.cpp" line="156"/>
-        <location filename="../src/lib/preferences/preferences.cpp" line="579"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="583"/>
         <source>Default</source>
         <translation>默认</translation>
     </message>
@@ -4313,78 +4313,78 @@ Are you sure to close this window?</source>
         <translation>设为默认</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="563"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="567"/>
         <source>OSD Notification</source>
         <translation>OSD（屏显气泡）通知</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="564"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="568"/>
         <source>Drag it on the screen to place it where you want.</source>
         <translation>在屏幕上拖动它到您想要的地方。</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="605"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="615"/>
         <source>Choose download location...</source>
         <translation>请选择下载位置…</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="619"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="629"/>
         <source>Choose stylesheet location...</source>
         <translation>请选择 CSS 样式表位置…</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="630"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="640"/>
         <source>Deleted</source>
         <translation>已删除</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="636"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="646"/>
         <source>Choose executable location...</source>
         <translation>请选择可执行文件…</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="766"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="773"/>
         <source>Choose cache path...</source>
         <translation>选择缓存路径…</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="812"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="819"/>
         <source>New Profile</source>
         <translation>新建配置文件</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="812"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="819"/>
         <source>Enter the new profile&apos;s name:</source>
         <translation>输入新配置文件的名称：</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="823"/>
-        <location filename="../src/lib/preferences/preferences.cpp" line="828"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="830"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="835"/>
         <source>Error!</source>
         <translation>错误！</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="823"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="830"/>
         <source>This profile already exists!</source>
         <translation>此配置文件已经存在！</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="828"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="835"/>
         <source>Cannot create profile directory!</source>
         <translation>无法创建配置文件目录！</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="839"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="846"/>
         <source>Confirmation</source>
         <translation>请确认</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="840"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="847"/>
         <source>Are you sure to permanently delete &quot;%1&quot; profile? This action cannot be undone!</source>
         <translation>您确定要永久删除用户配置文件“%1”吗？此操作无法恢复！</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/preferences.cpp" line="1133"/>
+        <location filename="../src/lib/preferences/preferences.cpp" line="1142"/>
         <source>Select Color</source>
         <translation>选择颜色</translation>
     </message>
@@ -4412,42 +4412,42 @@ Are you sure to close this window?</source>
         <translation>〈未于证书中给定〉</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/qztools.cpp" line="335"/>
+        <location filename="../src/lib/tools/qztools.cpp" line="341"/>
         <source>Unknown size</source>
         <translation>大小未知</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/qztools.cpp" line="340"/>
+        <location filename="../src/lib/tools/qztools.cpp" line="346"/>
         <source>KB</source>
         <translation>KB</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/qztools.cpp" line="345"/>
+        <location filename="../src/lib/tools/qztools.cpp" line="351"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/qztools.cpp" line="349"/>
+        <location filename="../src/lib/tools/qztools.cpp" line="355"/>
         <source>GB</source>
         <translation>GB</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/qztools.cpp" line="786"/>
+        <location filename="../src/lib/tools/qztools.cpp" line="792"/>
         <source>Executable: </source>
         <translation>可执行文件：</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/qztools.cpp" line="787"/>
+        <location filename="../src/lib/tools/qztools.cpp" line="793"/>
         <source>Arguments: </source>
         <translation>参数：</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/qztools.cpp" line="789"/>
+        <location filename="../src/lib/tools/qztools.cpp" line="795"/>
         <source>Cannot start external program</source>
         <translation>无法启动外部程序</translation>
     </message>
     <message>
-        <location filename="../src/lib/tools/qztools.cpp" line="790"/>
+        <location filename="../src/lib/tools/qztools.cpp" line="796"/>
         <source>Cannot start external program! %1</source>
         <translation>无法启动外部程序！%1</translation>
     </message>
@@ -4477,12 +4477,12 @@ Are you sure to close this window?</source>
     <message>
         <location filename="../src/lib/3rdparty/qtwin.cpp" line="396"/>
         <source>Open new private window</source>
-        <translation type="unfinished"/>
+        <translation>新建隐私浏览窗口</translation>
     </message>
     <message>
         <location filename="../src/lib/3rdparty/qtwin.cpp" line="396"/>
         <source>Opens a new private window</source>
-        <translation type="unfinished"/>
+        <translation>打开一个新隐私浏览窗口</translation>
     </message>
     <message>
         <location filename="../src/lib/3rdparty/qtwin.cpp" line="400"/>
@@ -4577,7 +4577,7 @@ Are you sure to close this window?</source>
     </message>
     <message>
         <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="219"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="377"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="378"/>
         <source>Information about version</source>
         <translation>版本信息</translation>
     </message>
@@ -4588,13 +4588,13 @@ Are you sure to close this window?</source>
     </message>
     <message>
         <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="223"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="387"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="388"/>
         <source>Version</source>
         <translation>版本</translation>
     </message>
     <message>
         <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="230"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="400"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="401"/>
         <source>WebKit version</source>
         <translation>WebKit 版本</translation>
     </message>
@@ -4614,316 +4614,302 @@ Are you sure to close this window?</source>
         <translation>翻译人员</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="304"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="305"/>
         <source>Speed Dial</source>
         <translation>快速拨号</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="305"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="306"/>
         <source>Add New Page</source>
         <translation>添加新网页</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="306"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="307"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="307"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="308"/>
         <source>Remove</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="308"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="309"/>
         <source>Reload</source>
         <translation>重新载入</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="309"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="310"/>
         <source>Are you sure to remove this speed dial?</source>
         <translation>您确定要删除此快速拨号吗？</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="310"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="311"/>
         <source>Are you sure to reload all speed dials?</source>
-        <translation type="unfinished"/>
+        <translation>您确定要重载所有快速拨号吗？</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="311"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="312"/>
         <source>Load title from page</source>
         <translation>从网页载入标题</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="312"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="313"/>
         <source>Url</source>
         <translation>网址</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="313"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="314"/>
         <source>Title</source>
         <translation>标题</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="314"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="315"/>
         <source>Apply</source>
         <translation>应用</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="315"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="316"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="316"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="317"/>
         <source>New Page</source>
         <translation>新增网页</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="317"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="318"/>
         <source>Speed Dial settings</source>
         <translation>快速拨号设置</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="318"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="319"/>
         <source>Placement: </source>
         <translation>铺展方式：</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="319"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="320"/>
         <source>Auto</source>
         <translation>居中</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="320"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="321"/>
         <source>Cover</source>
         <translation>拉伸</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="321"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="322"/>
         <source>Fit</source>
         <translation>等比例拉伸</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="322"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="323"/>
         <source>Fit Width</source>
         <translation>齐宽</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="323"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="324"/>
         <source>Fit Height</source>
         <translation>齐高</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="324"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="325"/>
         <source>Use background image</source>
         <translation>使用背景图片</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="325"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="326"/>
         <source>Select image</source>
         <translation>选择图像</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="326"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="327"/>
         <source>Maximum pages in a row:</source>
         <translation>每排最多页面数：</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="327"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="328"/>
         <source>Change size of pages:</source>
         <translation>更改页面的大小：</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="328"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="329"/>
         <source>Center speed dials</source>
         <translation>居中快速拨号项目</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="354"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="355"/>
         <source>Restore Session</source>
         <translation>恢复会话</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="355"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="356"/>
         <source>Oops, QupZilla crashed.</source>
         <translation>糟糕，QupZilla 刚才崩溃了。</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="356"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="357"/>
         <source>We apologize for this. Would you like to restore the last saved state?</source>
         <translation>对此我们非常抱歉。您想恢复崩溃之前的会话吗？</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="357"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="358"/>
         <source>Try removing one or more tabs that you think cause troubles</source>
         <translation>试着去掉一个或多个可能引起问题的标签页</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="358"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="359"/>
         <source>Or you can start completely new session</source>
         <translation>或者您可以开始全新会话</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="375"/>
         <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="376"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="377"/>
         <source>Configuration Information</source>
         <translation>配置信息</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="378"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="379"/>
         <source>This page contains information about QupZilla&apos;s current configuration - relevant for troubleshooting. Please include this information when submitting bug reports.</source>
         <translation>此页面包含 QupZilla 当前配置信息——与排除故障相关。请在提交错误报告时包含这些信息。</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="379"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="380"/>
         <source>Browser Identification</source>
         <translation>浏览器标识（用户代理字符串）</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="380"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="381"/>
         <source>Paths</source>
         <translation>路径</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="381"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="382"/>
         <source>Build Configuration</source>
         <translation>构建配置</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="382"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="383"/>
         <source>Preferences</source>
         <translation>首选项</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="383"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="384"/>
         <source>Option</source>
         <translation>选项</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="384"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="385"/>
         <source>Value</source>
         <translation>值</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="385"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="386"/>
         <source>Extensions</source>
         <translation>附加组件</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="386"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="387"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="388"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="389"/>
         <source>Author</source>
         <translation>作者</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="389"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="390"/>
         <source>Description</source>
         <translation>描述</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="392"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="393"/>
         <source>Application version</source>
         <translation>程序版本</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="399"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="400"/>
         <source>Qt version</source>
         <translation>Qt 版本</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="401"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="402"/>
         <source>Build time</source>
         <translation>构建时间</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="402"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="403"/>
         <source>Platform</source>
         <translation>操作平台</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="405"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="406"/>
         <source>Profile</source>
         <translation>配置文件</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="406"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="407"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="407"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="408"/>
         <source>Saved session</source>
         <translation>已保存的会话</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="408"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="409"/>
         <source>Pinned tabs</source>
         <translation>已固定的标签</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="409"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="410"/>
         <source>Data</source>
         <translation>数据</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="410"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="411"/>
         <source>Themes</source>
         <translation>主题</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="411"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="412"/>
         <source>Translations</source>
         <translation>翻译</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="414"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="420"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="426"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="432"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="437"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="415"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="422"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="428"/>
         <source>&lt;b&gt;Enabled&lt;/b&gt;</source>
         <translation>&lt;b&gt;启用&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="416"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="422"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="417"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="424"/>
         <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="428"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="434"/>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="437"/>
         <source>Disabled</source>
         <translation>禁用</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="440"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="431"/>
         <source>Debug build</source>
         <translation>调试构建</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="441"/>
-        <source>WebGL support</source>
-        <translation>WebGL 支持</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="442"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="433"/>
         <source>Windows 7 API</source>
         <translation>Windows 7 API</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="443"/>
-        <source>KDE integration</source>
-        <translation>KDE 整合</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="444"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="435"/>
         <source>Portable build</source>
         <translation>便携式构建</translation>
     </message>
     <message>
-        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="462"/>
+        <location filename="../src/lib/network/schemehandlers/qupzillaschemehandler.cpp" line="453"/>
         <source>No available extensions.</source>
         <translation>无可用附加组件。</translation>
     </message>
@@ -5027,7 +5013,7 @@ Please add some with RSS icon in navigation bar on site which offers feeds.</sou
     <message>
         <location filename="../src/lib/rss/rssmanager.cpp" line="259"/>
         <source>Open link in &amp;private window</source>
-        <translation type="unfinished"/>
+        <translation>在新隐私窗口中打开链接 (&amp;p)</translation>
     </message>
     <message>
         <location filename="../src/lib/rss/rssmanager.cpp" line="384"/>
@@ -5108,7 +5094,7 @@ Please add some with RSS icon in navigation bar on site which offers feeds.</sou
     <message>
         <location filename="../src/lib/rss/rsswidget.cpp" line="72"/>
         <source>You already have this feed.</source>
-        <translation type="unfinished"/>
+        <translation>您已有此订阅。</translation>
     </message>
 </context>
 <context>
@@ -5116,7 +5102,7 @@ Please add some with RSS icon in navigation bar on site which offers feeds.</sou
     <message>
         <location filename="../src/lib/session/recoverywidget.ui" line="18"/>
         <source>Windows and Tabs</source>
-        <translation type="unfinished"/>
+        <translation>窗口和标签页</translation>
     </message>
     <message>
         <location filename="../src/lib/session/recoverywidget.ui" line="34"/>
@@ -5154,12 +5140,12 @@ Maybe relaunch with administrator right do a magic for you! ;)</source>
     <message>
         <location filename="../src/lib/navigation/reloadstopbutton.cpp" line="57"/>
         <source>Stop</source>
-        <translation type="unfinished"/>
+        <translation>停止</translation>
     </message>
     <message>
         <location filename="../src/lib/navigation/reloadstopbutton.cpp" line="61"/>
         <source>Reload</source>
-        <translation type="unfinished"/>
+        <translation>重载</translation>
     </message>
 </context>
 <context>
@@ -5242,7 +5228,7 @@ Maybe relaunch with administrator right do a magic for you! ;)</source>
     <message>
         <location filename="../src/lib/preferences/sslmanager.ui" line="224"/>
         <source>Disable weak ciphers</source>
-        <translation type="unfinished"/>
+        <translation>禁用弱密码</translation>
     </message>
     <message>
         <location filename="../src/lib/preferences/sslmanager.ui" line="246"/>
@@ -5252,17 +5238,17 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
 添加或删除证书路径后，需要重新启动 QupZilla 才能生效。</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/sslmanager.cpp" line="64"/>
+        <location filename="../src/lib/preferences/sslmanager.cpp" line="65"/>
         <source>Choose path...</source>
         <translation>选择路径…</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/sslmanager.cpp" line="135"/>
+        <location filename="../src/lib/preferences/sslmanager.cpp" line="136"/>
         <source>Import certificate...</source>
         <translation>导入证书…</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/sslmanager.cpp" line="166"/>
+        <location filename="../src/lib/preferences/sslmanager.cpp" line="167"/>
         <source>Certificate Informations</source>
         <translation>证书信息</translation>
     </message>
@@ -5320,23 +5306,23 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
         <translation>设为默认</translation>
     </message>
     <message>
-        <location filename="../src/lib/opensearch/searchenginesdialog.cpp" line="48"/>
+        <location filename="../src/lib/opensearch/searchenginesdialog.cpp" line="49"/>
         <location filename="../src/lib/opensearch/searchenginesmanager.cpp" line="344"/>
         <source>Add Search Engine</source>
         <translation>添加搜索引擎</translation>
     </message>
     <message>
-        <location filename="../src/lib/opensearch/searchenginesdialog.cpp" line="85"/>
+        <location filename="../src/lib/opensearch/searchenginesdialog.cpp" line="86"/>
         <source>Remove Engine</source>
         <translation>删除引擎</translation>
     </message>
     <message>
-        <location filename="../src/lib/opensearch/searchenginesdialog.cpp" line="86"/>
+        <location filename="../src/lib/opensearch/searchenginesdialog.cpp" line="87"/>
         <source>You can&apos;t remove the default search engine.&lt;br&gt;Set a different engine as default before removing %1.</source>
         <translation>不能删除默认搜索引擎。&lt;br&gt;删除 %1 前请先将其他引擎设为默认。</translation>
     </message>
     <message>
-        <location filename="../src/lib/opensearch/searchenginesdialog.cpp" line="103"/>
+        <location filename="../src/lib/opensearch/searchenginesdialog.cpp" line="104"/>
         <source>Edit Search Engine</source>
         <translation>编辑搜索引擎</translation>
     </message>
@@ -5811,17 +5797,17 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="../src/lib/plugins/speeddial.cpp" line="287"/>
+        <location filename="../src/lib/plugins/speeddial.cpp" line="296"/>
         <source>Image files</source>
         <translation>图像文件</translation>
     </message>
     <message>
-        <location filename="../src/lib/plugins/speeddial.cpp" line="288"/>
+        <location filename="../src/lib/plugins/speeddial.cpp" line="297"/>
         <source>Select image...</source>
         <translation>选择图像…</translation>
     </message>
     <message>
-        <location filename="../src/lib/plugins/speeddial.cpp" line="341"/>
+        <location filename="../src/lib/plugins/speeddial.cpp" line="350"/>
         <source>Unable to load</source>
         <translation>无法加载</translation>
     </message>
@@ -5884,12 +5870,12 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
     <message>
         <location filename="../src/lib/plugins/qtwebkit/spellcheck/speller.cpp" line="160"/>
         <source>Check &amp;Spelling</source>
-        <translation type="unfinished"/>
+        <translation>检查拼写  (&amp;S)</translation>
     </message>
     <message>
         <location filename="../src/lib/plugins/qtwebkit/spellcheck/speller.cpp" line="165"/>
         <source>Languages</source>
-        <translation type="unfinished"/>
+        <translation>语言</translation>
     </message>
     <message>
         <location filename="../src/lib/plugins/qtwebkit/spellcheck/speller.cpp" line="211"/>
@@ -6018,7 +6004,7 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
     <message>
         <location filename="../src/lib/tabwidget/tabwidget.cpp" line="161"/>
         <source>Closed tabs</source>
-        <translation type="unfinished"/>
+        <translation>已关闭的标签页</translation>
     </message>
     <message>
         <location filename="../src/lib/tabwidget/tabwidget.cpp" line="172"/>
@@ -6027,9 +6013,8 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
     </message>
     <message numerus="yes">
         <location filename="../src/lib/tabwidget/tabwidget.cpp" line="283"/>
-        <location filename="../src/lib/tabwidget/tabwidget.cpp" line="487"/>
         <source>Currently you have %n opened tab(s)</source>
-        <translation type="unfinished"><numerusform></numerusform></translation>
+        <translation><numerusform>目前已打开 %1 个标签页</numerusform></translation>
     </message>
     <message>
         <location filename="../src/lib/tabwidget/tabwidget.cpp" line="300"/>
@@ -6045,6 +6030,11 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
         <location filename="../src/lib/tabwidget/tabwidget.cpp" line="305"/>
         <source>Clear list</source>
         <translation>清除列表 (&amp;C)</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../src/lib/tabwidget/tabwidget.cpp" line="487"/>
+        <source>Currently you have %n opened tabs</source>
+        <translation><numerusform>目前已打开 %1 个标签页</numerusform></translation>
     </message>
     <message>
         <location filename="../src/lib/tabwidget/tabwidget.cpp" line="819"/>
@@ -6145,22 +6135,22 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/useragentdialog.cpp" line="86"/>
+        <location filename="../src/lib/preferences/useragentdialog.cpp" line="88"/>
         <source>Add new site</source>
         <translation>添加新网站</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/useragentdialog.cpp" line="124"/>
+        <location filename="../src/lib/preferences/useragentdialog.cpp" line="126"/>
         <source>Edit site</source>
         <translation>编辑网站</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/useragentdialog.cpp" line="202"/>
+        <location filename="../src/lib/preferences/useragentdialog.cpp" line="204"/>
         <source>Site domain: </source>
         <translation>网站域名：</translation>
     </message>
     <message>
-        <location filename="../src/lib/preferences/useragentdialog.cpp" line="203"/>
+        <location filename="../src/lib/preferences/useragentdialog.cpp" line="205"/>
         <source>User Agent: </source>
         <translation>UA 字符串：</translation>
     </message>
@@ -6168,173 +6158,173 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
 <context>
     <name>WebPage</name>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="389"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="395"/>
         <source>QupZilla cannot handle &lt;b&gt;%1:&lt;/b&gt; links. The requested link is &lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;Do you want QupZilla to try open this link in system application?</source>
         <translation>QupZilla 无法处理 URI 方案（URL 协议）&lt;b&gt;%1:&lt;/b&gt;。请求的链接是 &lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;。是否使用系统程序打开此链接？</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="394"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="400"/>
         <source>Remember my choice for this protocol</source>
         <translation>记住我对该 URI 方案（URL 协议）的选择</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="395"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="401"/>
         <source>External Protocol Request</source>
         <translation>外部协议请求</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="576"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="582"/>
         <source>To display this page, QupZilla must resend the request 
 (such as a search or order confirmation) that was performed earlier.</source>
-        <translation type="unfinished"/>
+        <translation>要显示此页面，Qupzilla 必须重新发送之前发送的请求（比如搜索动作以及订单确认）。</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="578"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="584"/>
         <source>Confirm form resubmission</source>
         <translation>确定重新提交表单</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="755"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="761"/>
         <source>Select files to upload...</source>
         <translation>选择要上传的文件…</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="776"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="782"/>
         <source>Server refused the connection</source>
         <translation>服务器拒绝了连接</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="779"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="785"/>
         <source>Server closed the connection</source>
         <translation>服务器关闭了连接</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="789"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="795"/>
         <source>Server not found</source>
         <translation>找不到服务器</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="792"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="798"/>
         <source>Connection timed out</source>
         <translation>连接超时</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="795"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="801"/>
         <source>Untrusted connection</source>
         <translation>不受信任的连接</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="798"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="804"/>
         <source>Temporary network failure</source>
         <translation>临时网络故障</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="801"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="807"/>
         <source>Proxy connection refused</source>
         <translation>代理服务器连接被拒绝</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="804"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="810"/>
         <source>Proxy server not found</source>
         <translation>找不到代理服务器</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="807"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="813"/>
         <source>Proxy connection timed out</source>
         <translation>代理服务器连接超时</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="810"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="816"/>
         <source>Proxy authentication required</source>
         <translation>代理服务器要求身份验证</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="813"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="819"/>
         <source>Content not found</source>
         <translation>未找到内容</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="816"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="822"/>
         <source>Unknown network error</source>
         <translation>未知网络错误</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="846"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="854"/>
         <source>AdBlocked Content</source>
         <translation>AdBlock 阻止的内容</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="850"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="858"/>
         <source>Blocked by &lt;i&gt;%1&lt;/i&gt;</source>
         <translation>被规则 &lt;i&gt;%1&lt;/i&gt; 阻止</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="867"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="875"/>
         <source>Content Access Denied</source>
         <translation>内容访问被拒绝</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="882"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="890"/>
         <source>Error code %1</source>
         <translation>错误代码 %1</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="894"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="902"/>
         <source>Failed loading page</source>
         <translation>载入网页失败</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="900"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="908"/>
         <source>QupZilla can&apos;t load page.</source>
         <translation>QupZilla 无法加载网页。</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="900"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="908"/>
         <source>QupZilla can&apos;t load page from %1.</source>
         <translation>QupZilla 无法从 %1 加载网页。</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="904"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="912"/>
         <source>Check the address for typing errors such as &lt;b&gt;ww.&lt;/b&gt;example.com instead of &lt;b&gt;www.&lt;/b&gt;example.com</source>
         <translation>检查输入错误的地址，如是否将&lt;B&gt;www.&lt;/B&gt;example.com输成了&lt;B&gt;ww.&lt;/B&gt;example.com</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="905"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="913"/>
         <source>If you are unable to load any pages, check your computer&apos;s network connection.</source>
         <translation>如果您无法载入任何网页，请检查您计算机的网络连接。</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="906"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="914"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that QupZilla is permitted to access the Web.</source>
         <translation>如果您的计算机或网络受到防火墙或代理的保护，确保 QupZilla 获准访问网络。&lt;/Li&gt;&lt;Li&gt;当然，如果说你关不掉或者说防火墙根本不在你的计算机上，那就自己珍重吧。</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="907"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="915"/>
         <source>Try Again</source>
         <translation>重试</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="1007"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="1015"/>
         <source>JavaScript alert</source>
         <translation>脚本警告</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="1015"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="1023"/>
         <source>Prevent this page from creating additional dialogs</source>
         <translation>防止此页创建更多的对话框</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="1068"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="1076"/>
         <source>Choose file...</source>
         <translation>选择文件…</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="1076"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="1084"/>
         <source>Cannot read data from &lt;b&gt;%1&lt;/b&gt;. Upload was cancelled!</source>
         <translation>未能从&lt;B&gt;%1&lt;/B&gt;读取文件，上传操作已被取消。</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webpage.cpp" line="1077"/>
+        <location filename="../src/lib/webkit/webpage.cpp" line="1085"/>
         <source>Cannot read file!</source>
         <translation>无法读取文件！</translation>
     </message>
@@ -6347,22 +6337,22 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
         <translation>管理搜索引擎</translation>
     </message>
     <message>
-        <location filename="../src/lib/navigation/websearchbar.cpp" line="238"/>
+        <location filename="../src/lib/navigation/websearchbar.cpp" line="236"/>
         <source>Add %1 ...</source>
         <translation>新增%1…</translation>
     </message>
     <message>
-        <location filename="../src/lib/navigation/websearchbar.cpp" line="261"/>
+        <location filename="../src/lib/navigation/websearchbar.cpp" line="259"/>
         <source>Paste And &amp;Search</source>
         <translation>粘贴并搜索 (&amp;S)</translation>
     </message>
     <message>
-        <location filename="../src/lib/navigation/websearchbar.cpp" line="270"/>
+        <location filename="../src/lib/navigation/websearchbar.cpp" line="268"/>
         <source>Show suggestions</source>
         <translation>显示建议</translation>
     </message>
     <message>
-        <location filename="../src/lib/navigation/websearchbar.cpp" line="275"/>
+        <location filename="../src/lib/navigation/websearchbar.cpp" line="273"/>
         <source>Search when engine changed</source>
         <translation>切换引擎时搜索</translation>
     </message>
@@ -6372,341 +6362,341 @@ After adding or removing certificate paths, it is neccessary to restart QupZilla
     <message>
         <location filename="../src/lib/webtab/webtab.cpp" line="361"/>
         <source>Loading...</source>
-        <translation type="unfinished"/>
+        <translation>载入中…</translation>
     </message>
     <message>
         <location filename="../src/lib/webtab/webtab.cpp" line="377"/>
         <source>%1 - QupZilla</source>
-        <translation type="unfinished"/>
+        <translation>%1 - QupZilla</translation>
     </message>
 </context>
 <context>
     <name>WebView</name>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="124"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="122"/>
         <source>Empty Page</source>
-        <translation type="unfinished"/>
+        <translation>空白页</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="861"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="851"/>
         <source>Create Search Engine</source>
         <translation>创建搜索引擎</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="878"/>
-        <source>Cut</source>
-        <translation>剪切 [&amp;t]</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="880"/>
-        <source>Copy</source>
-        <translation>复制 [&amp;C]</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="882"/>
-        <source>Paste</source>
-        <translation>粘贴 [&amp;P]</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="884"/>
-        <source>Select All</source>
-        <translation>全选 [&amp;A]</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="886"/>
-        <source>Default</source>
-        <translation>默认</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="887"/>
-        <source>Left to Right</source>
-        <translation>左至右</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="888"/>
-        <source>Right to Left</source>
-        <translation>右至左</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="889"/>
-        <source>Bold</source>
-        <translation>粗体</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="890"/>
-        <source>Italic</source>
-        <translation>罗马斜体</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="891"/>
-        <source>Underline</source>
-        <translation>下划线</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="893"/>
-        <location filename="../src/lib/webkit/webview.cpp" line="1033"/>
-        <source>&amp;Reload</source>
-        <translation>重新载入 (&amp;R)</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="894"/>
-        <source>S&amp;top</source>
-        <translation>停止 (&amp;t)</translation>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="934"/>
-        <source>Undo</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="937"/>
-        <source>Redo</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="960"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="917"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1001"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="958"/>
         <source>&amp;Back</source>
         <translation>后退 (&amp;B)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1005"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="962"/>
         <source>&amp;Forward</source>
         <translation>前进 (&amp;F)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1012"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="969"/>
         <source>&amp;Add New Page</source>
-        <translation type="unfinished"/>
+        <translation>新增页面 (&amp;A)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1013"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="970"/>
         <source>&amp;Configure Speed Dial</source>
-        <translation type="unfinished"/>
+        <translation>配置快速拨号 (&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1015"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="972"/>
         <source>Reload All Dials</source>
-        <translation type="unfinished"/>
+        <translation>重载全部拨号页</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1025"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="982"/>
         <source>This frame</source>
         <translation>该框架页 (&amp;e)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1027"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="984"/>
         <source>Show &amp;only this frame</source>
         <translation>只显示此框架页 (&amp;O)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1028"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="985"/>
         <source>Show this frame in new &amp;tab</source>
         <translation>在新标签页中显示此框架页 (&amp;T)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1034"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="990"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1244"/>
+        <source>&amp;Reload</source>
+        <translation>重新载入 (&amp;R)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="991"/>
         <source>Print frame</source>
         <translation>打印框架页 (&amp;P)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1036"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="993"/>
         <source>Zoom &amp;in</source>
         <translation>放大 (&amp;I)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1037"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="994"/>
         <source>&amp;Zoom out</source>
         <translation>缩小 (&amp;O)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1038"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="995"/>
         <source>Reset</source>
         <translation>重置 (&amp;0)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1040"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="997"/>
         <source>Show so&amp;urce of frame</source>
         <translation>显示框架页源代码 (&amp;u)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1046"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1003"/>
         <source>Book&amp;mark page</source>
         <translation>加为书签 (&amp;m)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1047"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1004"/>
         <source>&amp;Save page as...</source>
         <translation>页面另存为 (&amp;S)…</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1048"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1005"/>
         <source>&amp;Copy page link</source>
         <translation>复制网页链接 (&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1049"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1006"/>
         <source>Send page link...</source>
         <translation>发送网页链接…</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1050"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1007"/>
         <source>&amp;Print page</source>
         <translation>打印网页 (&amp;P)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1052"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1009"/>
         <source>Select &amp;all</source>
         <translation>全选 (&amp;A)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1057"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1014"/>
         <source>Validate page</source>
         <translation>在 W3C 上验证网页</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1061"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1018"/>
         <source>Translate page</source>
         <translation>翻译此页面</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1065"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1022"/>
         <source>Show so&amp;urce code</source>
         <translation>查看页面源代码 (&amp;V)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1066"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1023"/>
         <source>Show info ab&amp;out site</source>
         <translation>查看页面信息 (&amp;I)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1072"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1029"/>
         <source>Open link in new &amp;tab</source>
         <translation>在新标签页中打开 (&amp;T)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1077"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1034"/>
         <source>Open link in new &amp;window</source>
         <translation>在新窗口中打开 (&amp;W)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1078"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1035"/>
         <source>Open link in &amp;private window</source>
-        <translation type="unfinished"/>
+        <translation>在新隐私窗口中打开链接 (&amp;p)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1083"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1040"/>
         <source>B&amp;ookmark link</source>
         <translation>将链接加为书签 (&amp;o)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1085"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1042"/>
         <source>&amp;Save link as...</source>
         <translation>链接另存为 (&amp;S)…</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1086"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1043"/>
         <source>Send link...</source>
         <translation>发送链接…</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1087"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1044"/>
         <source>&amp;Copy link address</source>
         <translation>复制链接地址 (&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1099"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1056"/>
         <source>Show i&amp;mage</source>
         <translation>查看图像 (&amp;V)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1104"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1061"/>
         <source>Copy im&amp;age</source>
         <translation>复制图像 (&amp;a)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1105"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1062"/>
         <source>Copy image ad&amp;dress</source>
         <translation>复制图像地址 (&amp;d)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1107"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1064"/>
         <source>&amp;Save image as...</source>
         <translation>图片另存为 (&amp;S)…</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1108"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1065"/>
         <source>Send image...</source>
         <translation>发送图片…</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1127"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1084"/>
         <source>Send text...</source>
         <translation>发送选中的文本…</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1132"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1089"/>
         <source>Google Translate</source>
         <translation>Google 翻译</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1138"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1095"/>
         <source>Dictionary</source>
         <translation>词典</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1153"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1110"/>
         <source>Go to &amp;web address</source>
         <translation>转到网址 (&amp;W)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1167"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1124"/>
         <source>Search &quot;%1 ..&quot; with %2</source>
         <translation>使用 %2 搜索“%1…”</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1173"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1130"/>
         <source>Search with...</source>
         <translation>用…搜索</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1201"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1158"/>
         <source>&amp;Play</source>
         <translation>播放 (&amp;P)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1201"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1158"/>
         <source>&amp;Pause</source>
         <translation>暂停 (&amp;P)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1202"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1159"/>
         <source>Un&amp;mute</source>
         <translation>取消静音 (&amp;m)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1202"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1159"/>
         <source>&amp;Mute</source>
         <translation>静音 (&amp;M)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1204"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1161"/>
         <source>&amp;Copy Media Address</source>
         <translation>复制媒体地址 (&amp;C)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1205"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1162"/>
         <source>&amp;Send Media Address</source>
         <translation>发送媒体地址 (&amp;S)</translation>
     </message>
     <message>
-        <location filename="../src/lib/webkit/webview.cpp" line="1206"/>
+        <location filename="../src/lib/webkit/webview.cpp" line="1163"/>
         <source>Save Media To &amp;Disk</source>
         <translation>保存媒体到磁盘 (&amp;D)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1208"/>
+        <source>&amp;Undo</source>
+        <translation>撤消  (&amp;U)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1214"/>
+        <source>&amp;Redo</source>
+        <translation>重做  (&amp;R)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1220"/>
+        <source>&amp;Cut</source>
+        <translation>剪切  (&amp;C)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1226"/>
+        <source>&amp;Copy</source>
+        <translation>复制 (&amp;C)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1232"/>
+        <source>&amp;Paste</source>
+        <translation>粘贴  (&amp;P)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1238"/>
+        <source>Select All</source>
+        <translation>全选 [&amp;A]</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1248"/>
+        <source>S&amp;top</source>
+        <translation>停止 (&amp;t)</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1251"/>
+        <source>Default</source>
+        <translation>默认</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1252"/>
+        <source>Left to Right</source>
+        <translation>左至右</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1253"/>
+        <source>Right to Left</source>
+        <translation>右至左</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1254"/>
+        <source>Bold</source>
+        <translation>粗体</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1255"/>
+        <source>Italic</source>
+        <translation>罗马斜体</translation>
+    </message>
+    <message>
+        <location filename="../src/lib/webkit/webview.cpp" line="1256"/>
+        <source>Underline</source>
+        <translation>下划线</translation>
     </message>
 </context>
 <context>

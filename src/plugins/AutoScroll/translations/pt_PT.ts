@@ -4,7 +4,7 @@
     <message>
         <location filename="../autoscrollsettings.ui" line="14"/>
         <source>AutoScroll Settings</source>
-        <translation>Definições do AutoScroll</translation>
+        <translation>Definições</translation>
     </message>
     <message>
         <location filename="../autoscrollsettings.ui" line="72"/>

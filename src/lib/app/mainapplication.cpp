@@ -118,8 +118,7 @@ MainApplication::MainApplication(int &argc, char** argv)
 
     // QSQLITE database plugin is required
     if (!QSqlDatabase::isDriverAvailable(QSL("QSQLITE"))) {
-        QMessageBox::critical(0, QSL("Error"), QSL("Qt SQLite database plugin is not available. "
-                                                   "Please install it and restart the application."));
+        QMessageBox::critical(0, QSL("Error"), QSL("Qt SQLite database plugin is not available. Please install it and restart the application."));
         m_isClosing = true;
         return;
     }
@@ -971,9 +970,12 @@ void MainApplication::translateApp()
 {
     QString file = Settings().value(QSL("Language/language"), QLocale::system().name()).toString();
 
-    if (!file.isEmpty() && !file.endsWith(QL1S(".qm"))) {
+    // It can only be "C" locale, for which we will use default English language
+    if (file.size() < 2)
+        file.clear();
+
+    if (!file.isEmpty() && !file.endsWith(QL1S(".qm")))
         file.append(QL1S(".qm"));
-    }
 
     // Either we load default language (with empty file), or we attempt to load xx.qm (xx_yy.qm)
     Q_ASSERT(file.isEmpty() || file.size() >= 5);

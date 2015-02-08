@@ -8,8 +8,8 @@
     </message>
     <message>
         <location filename="../sbi_imagesicon.cpp" line="56"/>
-        <source>Current page settings</source>
-        <translation>Pengaturan saat ini</translation>
+        <source>Current Page Settings</source>
+        <translation>Pengaturan Saat Ini</translation>
     </message>
     <message>
         <location filename="../sbi_imagesicon.cpp" line="59"/>
@@ -23,8 +23,8 @@
     </message>
     <message>
         <location filename="../sbi_imagesicon.cpp" line="66"/>
-        <source>Global settings</source>
-        <translation>Pengaturan global</translation>
+        <source>Global Settings</source>
+        <translation>Pengaturan Global</translation>
     </message>
     <message>
         <location filename="../sbi_imagesicon.cpp" line="68"/>
@@ -40,27 +40,27 @@
         <translation>Ubah pengaturan JavaScript persitus dan global</translation>
     </message>
     <message>
-        <location filename="../sbi_javascripticon.cpp" line="48"/>
-        <source>Current page settings</source>
-        <translation>Pengaturan saat ini</translation>
+        <location filename="../sbi_javascripticon.cpp" line="50"/>
+        <source>Current Page Settings</source>
+        <translation>Pengaturan Saat Ini</translation>
     </message>
     <message>
-        <location filename="../sbi_javascripticon.cpp" line="51"/>
+        <location filename="../sbi_javascripticon.cpp" line="53"/>
         <source>Disable JavaScript (temporarily)</source>
         <translation>Non-aktifkan JavaScript (sementara)</translation>
     </message>
     <message>
-        <location filename="../sbi_javascripticon.cpp" line="54"/>
+        <location filename="../sbi_javascripticon.cpp" line="56"/>
         <source>Enable JavaScript (temporarily)</source>
         <translation>Aktifkan JavaScript (sementara)</translation>
     </message>
     <message>
-        <location filename="../sbi_javascripticon.cpp" line="63"/>
-        <source>Global settings</source>
-        <translation>Pengaturan global</translation>
+        <location filename="../sbi_javascripticon.cpp" line="65"/>
+        <source>Global Settings</source>
+        <translation>Pengaturan Global</translation>
     </message>
     <message>
-        <location filename="../sbi_javascripticon.cpp" line="64"/>
+        <location filename="../sbi_javascripticon.cpp" line="66"/>
         <source>Manage JavaScript settings</source>
         <translation>Atur pengaturan JavaScript</translation>
     </message>
@@ -69,8 +69,8 @@
     <name>SBI_NetworkIcon</name>
     <message>
         <location filename="../sbi_networkicon.cpp" line="66"/>
-        <source>Proxy configuration</source>
-        <translation>Konfigurasi proxy</translation>
+        <source>Proxy Configuration</source>
+        <translation>Konfigurasi Proxy</translation>
     </message>
     <message>
         <location filename="../sbi_networkicon.cpp" line="68"/>
@@ -288,7 +288,7 @@
     <message>
         <location filename="../sbi_settingsdialog.ui" line="118"/>
         <source>Zoom widget</source>
-        <translation type="unfinished"/>
+        <translation>Zoom widget</translation>
     </message>
 </context>
 <context>
@@ -296,7 +296,7 @@
     <message>
         <location filename="../sbi_zoomwidget.cpp" line="47"/>
         <source>Zoom: %1%</source>
-        <translation type="unfinished"/>
+        <translation>Zoom: %1%</translation>
     </message>
 </context>
 </TS>

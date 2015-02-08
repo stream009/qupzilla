@@ -350,6 +350,12 @@ void WebPage::handleUnsupportedContent(QNetworkReply* reply)
             return;
         }
 
+        if (url.scheme() == QLatin1String("ftp")) {
+            DownloadManager* dManager = mApp->downloadManager();
+            dManager->handleUnsupportedContent(reply, this);
+            return;
+        }
+
         qDebug() << "WebPage::UnsupportedContent" << url << "ProtocolUnknowError";
         desktopServicesOpen(url);
 
@@ -823,22 +829,24 @@ bool WebPage::extension(Extension extension, const ExtensionOption* option, Exte
         }
         case QNetworkReply::ContentAccessDenied:
             if (exOption->errorString.startsWith(QLatin1String("AdBlock"))) {
-                if (exOption->frame != erPage->mainFrame()) { //Content in <iframe>
+                if (exOption->frame != erPage->mainFrame()) {
+                    // Content in <iframe>
                     QWebElement docElement = erPage->mainFrame()->documentElement();
 
                     QWebElementCollection elements;
-                    elements.append(docElement.findAll("iframe"));
+                    elements.append(docElement.findAll(QSL("iframe")));
 
                     foreach (QWebElement element, elements) {
-                        QString src = element.attribute("src");
-                        if (exOption->url.toString().contains(src)) {
-                            element.setStyleProperty("visibility", "hidden");
+                        const QString src = element.attribute(QSL("src"));
+                        if (!src.isEmpty() && exOption->url.toString().contains(src)) {
+                            element.setStyleProperty(QSL("display"), QSL("none"));
                         }
                     }
 
                     return false;
                 }
-                else {   //The whole page is blocked
+                else {
+                    // The whole page is blocked
                     QString rule = exOption->errorString;
                     rule.remove(QLatin1String("AdBlock: "));
 
