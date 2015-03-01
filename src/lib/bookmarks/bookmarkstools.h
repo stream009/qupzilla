@@ -25,6 +25,7 @@
 
 class Bookmarks;
 class BookmarkItem;
+class BookmarksMenuBase;
 
 class QUPZILLA_EXPORT BookmarksFoldersMenu : public QMenu
 {

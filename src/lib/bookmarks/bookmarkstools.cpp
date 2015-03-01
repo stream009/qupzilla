@@ -24,6 +24,7 @@
 #include "tabwidget.h"
 #include "qzsettings.h"
 #include "browserwindow.h"
+#include "bookmarksmenubase.h"
 
 #include <iostream>
 #include <QSqlQuery>
@@ -310,7 +311,8 @@ void BookmarksTools::addFolderToMenu(QObject* receiver, Menu* menu, BookmarkItem
     Q_ASSERT(folder);
     Q_ASSERT(folder->isFolder());
 
-    Menu* m = new Menu(menu);
+    BookmarksMenuBase* m = new BookmarksMenuBase(menu);
+    m->setMainWindow(static_cast<BookmarksMenuBase*>(menu)->mainWindow());
     QString title = QFontMetrics(m->font()).elidedText(folder->title(), Qt::ElideRight, 250);
     m->setTitle(title);
     m->setIcon(folder->icon());
@@ -321,7 +323,8 @@ void BookmarksTools::addFolderToMenu(QObject* receiver, Menu* menu, BookmarkItem
     act->setIconVisibleInMenu(true);
 
     foreach (BookmarkItem* child, folder->children()) {
-        addActionToMenu(receiver, m, child);
+        //addActionToMenu(receiver, m, child);
+        addActionToMenu(m, m, child);
     }
 
     if (m->isEmpty()) {

@@ -26,8 +26,8 @@
 #include "tabwidget.h"
 
 BookmarksMenu::BookmarksMenu(QWidget* parent)
-    : Menu(parent)
-    , m_window(0)
+    : BookmarksMenuBase(parent)
+//    , m_window(0)
     , m_changed(true)
 {
     init();
@@ -36,32 +36,32 @@ BookmarksMenu::BookmarksMenu(QWidget* parent)
     connect(mApp->bookmarks(), SIGNAL(bookmarkRemoved(BookmarkItem*)), this, SLOT(bookmarksChanged()));
     connect(mApp->bookmarks(), SIGNAL(bookmarkChanged(BookmarkItem*)), this, SLOT(bookmarksChanged()));
 }
-
+#if 0
 void BookmarksMenu::setMainWindow(BrowserWindow* window)
 {
     Q_ASSERT(window);
 
     m_window = window;
 }
-
+#endif
 void BookmarksMenu::bookmarkPage()
 {
-    if (m_window) {
-        m_window->bookmarkPage();
+    if (this->mainWindow()) {
+        this->mainWindow()->bookmarkPage();
     }
 }
 
 void BookmarksMenu::bookmarkAllTabs()
 {
-    if (m_window) {
-        BookmarksTools::bookmarkAllTabsDialog(m_window, m_window->tabWidget());
+    if (this->mainWindow()) {
+        BookmarksTools::bookmarkAllTabsDialog(this->mainWindow(), this->mainWindow()->tabWidget());
     }
 }
 
 void BookmarksMenu::showBookmarksManager()
 {
-    if (m_window) {
-        mApp->browsingLibrary()->showBookmarks(m_window);
+    if (this->mainWindow()) {
+        mApp->browsingLibrary()->showBookmarks(this->mainWindow());
     }
 }
 
@@ -84,7 +84,7 @@ void BookmarksMenu::menuMiddleClicked(Menu* menu)
     Q_ASSERT(item);
     openFolder(item);
 }
-
+#if 0
 void BookmarksMenu::bookmarkActivated()
 {
     if (QAction* action = qobject_cast<QAction*>(sender())) {
@@ -111,16 +111,16 @@ void BookmarksMenu::bookmarkShiftActivated()
         openBookmarkInNewWindow(item);
     }
 }
-
+#endif
 void BookmarksMenu::openFolder(BookmarkItem* item)
 {
     Q_ASSERT(item->isFolder());
 
-    if (m_window) {
-        BookmarksTools::openFolderInTabs(m_window, item);
+    if (this->mainWindow()) {
+        BookmarksTools::openFolderInTabs(this->mainWindow(), item);
     }
 }
-
+#if 0
 void BookmarksMenu::openBookmark(BookmarkItem* item)
 {
     Q_ASSERT(item->isUrl());
@@ -145,7 +145,7 @@ void BookmarksMenu::openBookmarkInNewWindow(BookmarkItem* item)
 
     BookmarksTools::openBookmarkInNewWindow(item);
 }
-
+#endif
 void BookmarksMenu::init()
 {
     setTitle(tr("&Bookmarks"));

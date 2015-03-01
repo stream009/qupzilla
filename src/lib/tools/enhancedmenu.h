@@ -41,10 +41,11 @@ signals:
 
 public slots:
 
-private:
+protected:
     void mouseReleaseEvent(QMouseEvent* e);
     void keyPressEvent(QKeyEvent* e);
 
+private:
     void closeAllMenus();
 
     bool m_closeOnMiddleClick;

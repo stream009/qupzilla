@@ -98,6 +98,7 @@ SOURCES += \
     bookmarks/bookmarksitemdelegate.cpp \
     bookmarks/bookmarksmanager.cpp \
     bookmarks/bookmarksmenu.cpp \
+    bookmarks/bookmarksmenubase.cpp \
     bookmarks/bookmarksmodel.cpp \
     bookmarks/bookmarkstoolbarbutton.cpp \
     bookmarks/bookmarkstoolbar.cpp \
@@ -298,6 +299,7 @@ HEADERS  += \
     bookmarks/bookmarksitemdelegate.h \
     bookmarks/bookmarksmanager.h \
     bookmarks/bookmarksmenu.h \
+    bookmarks/bookmarksmenubase.h \
     bookmarks/bookmarksmodel.h \
     bookmarks/bookmarkstoolbarbutton.h \
     bookmarks/bookmarkstoolbar.h \

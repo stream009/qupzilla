@@ -20,20 +20,21 @@
 
 #include <QPointer>
 
-#include "enhancedmenu.h"
+#include "bookmarksmenubase.h"
+
 #include "qzcommon.h"
 
 class BrowserWindow;
 class BookmarkItem;
 
-class QUPZILLA_EXPORT BookmarksMenu : public Menu
+class QUPZILLA_EXPORT BookmarksMenu : public BookmarksMenuBase
 {
     Q_OBJECT
 
 public:
     explicit BookmarksMenu(QWidget* parent = 0);
 
-    void setMainWindow(BrowserWindow* window);
+    //void setMainWindow(BrowserWindow* window);
 
 private slots:
     void bookmarkPage();
@@ -43,21 +44,22 @@ private slots:
     void bookmarksChanged();
     void aboutToShow();
     void menuMiddleClicked(Menu* menu);
-
+#if 0
     void bookmarkActivated();
     void bookmarkCtrlActivated();
     void bookmarkShiftActivated();
-
+#endif
     void openFolder(BookmarkItem* item);
+#if 0
     void openBookmark(BookmarkItem* item);
     void openBookmarkInNewTab(BookmarkItem* item);
     void openBookmarkInNewWindow(BookmarkItem* item);
-
+#endif
 private:
     void init();
     void refresh();
 
-    QPointer<BrowserWindow> m_window;
+    //QPointer<BrowserWindow> m_window;
     bool m_changed;
 };
 
