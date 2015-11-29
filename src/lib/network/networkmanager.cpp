@@ -38,6 +38,7 @@
 #include "schemehandlers/qupzillaschemehandler.h"
 #include "schemehandlers/fileschemehandler.h"
 #include "schemehandlers/ftpschemehandler.h"
+#include "blockednetworkreply.h"
 
 #include <QDir>
 #include <QFormLayout>
@@ -592,6 +593,24 @@ QNetworkReply* NetworkManager::createRequest(QNetworkAccessManager::Operation op
         }
     }
 
+    QVariant v = req.attribute(
+        static_cast<QNetworkRequest::Attribute>(QNetworkRequest::User + 100));
+    WebPage* const webPage = static_cast<WebPage*>(v.value<void*>());
+
+    const bool fromObject =
+        (request.attribute(
+            static_cast<QNetworkRequest::Attribute>(
+                QNetworkRequest::User + 150)).toString() == QL1S("object"));
+    std::vector<const ContentPolicy*>::const_iterator
+        it = m_contentPolicies.begin(),
+        end = m_contentPolicies.end();
+    for (; it != end; ++it) {
+        const ContentPolicy* const policy = *it;
+        if (!policy->shouldLoad(req, webPage, fromObject)) {
+            return new BlockedNetworkReply(req, policy->reason());
+        }
+    }
+
     return QNetworkAccessManager::createRequest(op, req, outgoingData);
 }
 
@@ -685,23 +704,60 @@ NetworkProxyFactory* NetworkManager::proxyFactory() const
     return m_proxyFactory;
 }
 
+template<typename Key, typename Value>
+static bool contains(const QHash<Key, Value> &hash,
+                     const Key &key, const Value &value)
+{
+    typedef typename QHash<Key, Value>::const_iterator It;
+    It it = hash.find(key);
+    const It end = hash.end();
+
+    for (; it != end && it.key() == key; ++it) {
+        if (it.value() == value) return true;
+    }
+
+    return false;
+}
+
 bool NetworkManager::registerSchemeHandler(const QString &scheme, SchemeHandler* handler)
 {
-    if (m_schemeHandlers.contains(scheme)) {
+    if (contains(m_schemeHandlers, scheme, handler)) {
         return false;
     }
 
-    m_schemeHandlers[scheme] = handler;
+    m_schemeHandlers.insertMulti(scheme, handler);
     return true;
+}
+
+template<typename Key, typename Value>
+static int remove(QHash<Key, Value> &hash,
+                  const Key &key, const Value &value)
+{
+    typedef typename QHash<Key, Value>::iterator It;
+
+    int deleted = 0;
+    It it = hash.find(key);
+    const It end = hash.end();
+    while (it != end && it.key() == key) {
+        if (it.value() == value) {
+            it = hash.erase(it);
+            ++deleted;
+        }
+        else {
+            ++it;
+        }
+    }
+
+    return deleted;
 }
 
 bool NetworkManager::unregisterSchemeHandler(const QString &scheme, SchemeHandler* handler)
 {
-    if (!m_schemeHandlers.contains(scheme) || m_schemeHandlers[scheme] != handler) {
+    if (!contains(m_schemeHandlers, scheme, handler)) {
         return false;
     }
 
-    return m_schemeHandlers.remove(scheme) == 1;
+    return remove(m_schemeHandlers, scheme, handler) == 1;
 }
 
 void NetworkManager::saveSettings()
@@ -774,4 +830,10 @@ void NetworkManager::loadCertificates()
 #if defined(Q_OS_WIN) || defined(Q_OS_HAIKU) || defined(Q_OS_OS2)
     new CaBundleUpdater(this, this);
 #endif
+}
+
+void NetworkManager::
+appendContentPolicy(const ContentPolicy &policy)
+{
+    m_contentPolicies.push_back(&policy);
 }

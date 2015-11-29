@@ -18,11 +18,14 @@
 #ifndef NETWORKMANAGER_H
 #define NETWORKMANAGER_H
 
+#include <vector>
+
 #include <QSslError>
 #include <QStringList>
 
 #include "qzcommon.h"
 #include "networkmanagerproxy.h"
+#include "contentpolicy.h"
 
 class AdBlockManager;
 class NetworkProxyFactory;
@@ -60,6 +63,8 @@ public:
     bool registerSchemeHandler(const QString &scheme, SchemeHandler* handler);
     bool unregisterSchemeHandler(const QString &scheme, SchemeHandler* handler);
 
+    void appendContentPolicy(const ContentPolicy&);
+
 signals:
     void sslDialogClosed();
 
@@ -83,6 +88,7 @@ private:
 
     QHash<QString, SchemeHandler*> m_schemeHandlers;
     QByteArray m_acceptLanguage;
+    std::vector<const ContentPolicy*> m_contentPolicies;
 
     bool m_ignoreAllWarnings;
     bool m_disableWeakCiphers;

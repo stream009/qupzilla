@@ -142,6 +142,7 @@ SOURCES += \
     network/schemehandlers/ftpschemehandler.cpp \
     network/schemehandlers/qupzillaschemehandler.cpp \
     network/sslerrordialog.cpp \
+    network/blockednetworkreply.cpp \
     notifications/desktopnotification.cpp \
     notifications/desktopnotificationsfactory.cpp \
     opensearch/editsearchengine.cpp \
@@ -344,6 +345,8 @@ HEADERS  += \
     network/schemehandlers/qupzillaschemehandler.h \
     network/schemehandlers/schemehandler.h \
     network/sslerrordialog.h \
+    network/contentpolicy.h \
+    network/blockednetworkreply.h \
     notifications/desktopnotification.h \
     notifications/desktopnotificationsfactory.h \
     opensearch/editsearchengine.h \
