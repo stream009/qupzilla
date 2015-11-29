@@ -113,7 +113,7 @@ public slots:
 protected slots:
     void slotLoadStarted();
     void slotLoadProgress(int progress);
-    void slotLoadFinished();
+    void slotLoadFinished(bool);
     void slotIconChanged();
     void slotUrlChanged(const QUrl &url);
 

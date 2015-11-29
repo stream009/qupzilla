@@ -66,7 +66,7 @@ WebView::WebView(QWidget* parent)
 {
     connect(this, SIGNAL(loadStarted()), this, SLOT(slotLoadStarted()));
     connect(this, SIGNAL(loadProgress(int)), this, SLOT(slotLoadProgress(int)));
-    connect(this, SIGNAL(loadFinished(bool)), this, SLOT(slotLoadFinished()));
+    connect(this, SIGNAL(loadFinished(bool)), this, SLOT(slotLoadFinished(bool)));
     connect(this, SIGNAL(iconChanged()), this, SLOT(slotIconChanged()));
     connect(this, SIGNAL(urlChanged(QUrl)), this, SLOT(slotUrlChanged(QUrl)));
 
@@ -457,12 +457,12 @@ void WebView::slotLoadProgress(int progress)
     }
 }
 
-void WebView::slotLoadFinished()
+void WebView::slotLoadFinished(const bool success)
 {
     m_isLoading = false;
     m_progress = 100;
 
-    if (!m_isReloading) {
+    if (success && !m_isReloading) {
         mApp->history()->addHistoryEntry(this);
     }
 
