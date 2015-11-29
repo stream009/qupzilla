@@ -38,6 +38,7 @@
 #include <QStatusBar>
 #include <QWebPage>
 #include <QMenuBar>
+#include <QDesktopServices>
 
 #ifdef Q_OS_MAC
 extern void qt_mac_set_dock_menu(QMenu* menu);
@@ -101,6 +102,9 @@ void MainMenu::initSuperMenu(QMenu* superMenu) const
     superMenu->addAction(m_actions[QSL("File/WorkOffline")]);
     superMenu->addSeparator();
     superMenu->addAction(m_actions[QSL("Standard/Quit")]);
+
+    connect(superMenu, SIGNAL(aboutToShow()), this, SLOT(aboutToShowSuperMenu()));
+    connect(superMenu, SIGNAL(aboutToHide()), this, SLOT(aboutToHideSuperMenu()));
 }
 
 QAction* MainMenu::action(const QString &name) const
@@ -175,9 +179,8 @@ void MainMenu::savePageScreen()
 
 void MainMenu::sendLink()
 {
-    if (m_window) {
-        m_window->weView()->savePageAs();
-    }
+    const QUrl mailUrl = QUrl::fromEncoded("mailto:%20?body=" + QUrl::toPercentEncoding(m_window->weView()->url().toEncoded()) + "&subject=" + QUrl::toPercentEncoding(m_window->weView()->title()));
+    QDesktopServices::openUrl(mailUrl);
 }
 
 void MainMenu::printPage()
@@ -336,9 +339,9 @@ void MainMenu::showRssManager()
     }
 }
 
-void MainMenu::showWebInspector()
+void MainMenu::toggleWebInspector()
 {
-    callSlot("showWebInspector");
+    callSlot("toggleWebInspector");
 }
 
 void MainMenu::showClearRecentHistoryDialog()
@@ -449,6 +452,24 @@ void MainMenu::aboutToShowToolsMenu()
 void MainMenu::aboutToHideToolsMenu()
 {
     m_actions[QSL("Tools/SiteInfo")]->setEnabled(false);
+}
+
+void MainMenu::aboutToShowSuperMenu()
+{
+    if (!m_window) {
+        return;
+    }
+
+    WebView* view = m_window->weView();
+
+    m_actions[QSL("Edit/Find")]->setEnabled(true);
+    m_actions[QSL("Edit/SelectAll")]->setEnabled(view->pageAction(QWebPage::SelectAll)->isEnabled());
+}
+
+void MainMenu::aboutToHideSuperMenu()
+{
+    m_actions[QSL("Edit/Find")]->setEnabled(true);
+    m_actions[QSL("Edit/SelectAll")]->setEnabled(false);
 }
 
 void MainMenu::aboutToShowToolbarsMenu()
@@ -598,7 +619,7 @@ void MainMenu::init()
     ADD_ACTION("Tools/CookiesManager", m_menuTools, QIcon(), tr("&Cookies Manager"), SLOT(showCookieManager()), "");
     ADD_ACTION("Tools/AdBlock", m_menuTools, QIcon(), tr("&AdBlock"), SLOT(showAdBlockDialog()), "");
     ADD_ACTION("Tools/RssReader", m_menuTools, QIcon(), tr("RSS &Reader"), SLOT(showRssManager()), "");
-    ADD_ACTION("Tools/WebInspector", m_menuTools, QIcon(), tr("Web In&spector"), SLOT(showWebInspector()), "Ctrl+Shift+I");
+    ADD_ACTION("Tools/WebInspector", m_menuTools, QIcon(), tr("Web In&spector"), SLOT(toggleWebInspector()), "Ctrl+Shift+I");
     ADD_ACTION("Tools/ClearRecentHistory", m_menuTools, QIcon::fromTheme(QSL("edit-clear")), tr("Clear Recent &History"), SLOT(showClearRecentHistoryDialog()), "Ctrl+Shift+Del");
     m_menuTools->addSeparator();
 

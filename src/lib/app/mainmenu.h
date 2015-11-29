@@ -91,7 +91,7 @@ private slots:
     void showCookieManager();
     void showAdBlockDialog();
     void showRssManager();
-    void showWebInspector();
+    void toggleWebInspector();
     void showClearRecentHistoryDialog();
 
     // Help menu
@@ -111,6 +111,8 @@ private slots:
     void aboutToHideEditMenu();
     void aboutToShowToolsMenu();
     void aboutToHideToolsMenu();
+    void aboutToShowSuperMenu();
+    void aboutToHideSuperMenu();
 
     void aboutToShowToolbarsMenu();
     void aboutToShowSidebarsMenu();

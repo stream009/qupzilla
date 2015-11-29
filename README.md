@@ -1,11 +1,11 @@
 QupZilla Web Browser
 ----------------------------------------------------------------------------------------
 
-[![Build Status](https://travis-ci.org/QupZilla/qupzilla.svg?branch=v1.8)](https://travis-ci.org/QupZilla/qupzilla)
-Homepage: [http://www.qupzilla.com](http://www.qupzilla.com)
-Blog: [http://blog.qupzilla.com](http://blog.qupzilla.com)
-IRC: `#qupzilla` at `irc.freenode.net`
-Translations: [https://www.transifex.com](https://www.transifex.com/projects/p/qupzilla)
+[![Build Status](https://travis-ci.org/QupZilla/qupzilla.svg?branch=v1.8)](https://travis-ci.org/QupZilla/qupzilla)  
+Homepage: [http://www.qupzilla.com](http://www.qupzilla.com)  
+Blog: [http://blog.qupzilla.com](http://blog.qupzilla.com)  
+IRC: `#qupzilla` at `irc.freenode.net`  
+Translations: [https://www.transifex.com](https://www.transifex.com/projects/p/qupzilla)  
 
 About QupZilla
 ----------------------------------------------------------------------------------------
@@ -74,7 +74,7 @@ You need to specify path to `macdeployqt` only if it is not in PATH.
 Current version
 ----------------------------------------------------------------------------------------
 
-The current stable version of QupZilla is 1.8.6. You can download precompiled packages
+The current stable version of QupZilla is 1.8.7. You can download precompiled packages
 and the sources from the download section at [homepage](http://www.qupzilla.com/download).
 However, if you want the latest revision, just take the latest code snapshot either by
 downloading a tarball or running:

@@ -76,6 +76,11 @@ QUrl GM_Script::downloadUrl() const
     return m_downloadUrl;
 }
 
+QUrl GM_Script::updateUrl() const
+{
+    return m_updateUrl;
+}
+
 GM_Script::StartAt GM_Script::startAt() const
 {
     return m_startAt;
@@ -158,22 +163,23 @@ void GM_Script::watchedFileChanged(const QString &file)
 
 void GM_Script::parseScript()
 {
-    QFile file(m_fileName);
-    if (!file.open(QFile::ReadOnly)) {
-        qWarning() << "GreaseMonkey: Cannot open file for reading" << m_fileName;
-        return;
-    }
-
     m_name.clear();
-    m_namespace = "GreaseMonkeyNS";
+    m_namespace = QSL("GreaseMonkeyNS");
     m_description.clear();
     m_version.clear();
     m_include.clear();
     m_exclude.clear();
     m_downloadUrl.clear();
+    m_updateUrl.clear();
     m_startAt = DocumentEnd;
     m_enabled = true;
     m_valid = false;
+
+    QFile file(m_fileName);
+    if (!file.open(QFile::ReadOnly)) {
+        qWarning() << "GreaseMonkey: Cannot open file for reading" << m_fileName;
+        return;
+    }
 
     if (!m_fileWatcher->files().contains(m_fileName)) {
         m_fileWatcher->addPath(m_fileName);
@@ -181,7 +187,7 @@ void GM_Script::parseScript()
 
     QString fileData = QString::fromUtf8(file.readAll());
 
-    QzRegExp rx("// ==UserScript==(.*)// ==/UserScript==");
+    QzRegExp rx(QSL("// ==UserScript==(.*)// ==/UserScript=="));
     rx.indexIn(fileData);
     QString metadataBlock = rx.cap(1).trimmed();
 
@@ -207,10 +213,6 @@ void GM_Script::parseScript()
 
         const QString key = line.left(index).trimmed();
         const QString value = line.mid(index + 1).trimmed();
-
-        // Ignored values:
-        //  @resource
-        //  @unwrap
 
         if (key.isEmpty() || value.isEmpty()) {
             continue;
@@ -251,6 +253,9 @@ void GM_Script::parseScript()
         else if (key == QLatin1String("@downloadURL") && m_downloadUrl.isEmpty()) {
             m_downloadUrl = QUrl(value);
         }
+        else if (key == QLatin1String("@updateURL") && m_updateUrl.isEmpty()) {
+            m_updateUrl = QUrl(value);
+        }
     }
 
     if (m_include.isEmpty()) {
@@ -272,5 +277,5 @@ void GM_Script::parseScript()
     script = jscript.arg(nspace, script);
 
     m_script = script;
-    m_valid = !script.isEmpty();
+    m_valid = true;
 }

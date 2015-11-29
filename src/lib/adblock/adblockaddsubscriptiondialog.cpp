@@ -25,7 +25,6 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(QWidget* parent)
     ui->setupUi(this);
 
     m_knownSubscriptions << Subscription("EasyList (English)", ADBLOCK_EASYLIST_URL)
-                         << Subscription("Fanboy's List (English)", "http://www.fanboy.co.nz/adblock/fanboy-adblock.txt")
                          << Subscription("Adversity (English)", "http://adversity.googlecode.com/hg/Adversity.txt")
                          << Subscription("BSI Lista Polska (Polish)", "http://www.bsi.info.pl/filtrABP.txt")
                          << Subscription("Czech List (Czech)", "http://adblock.dajbych.net/adblock.txt")
@@ -44,6 +43,7 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(QWidget* parent)
                          << Subscription("RU Adlist (Russian)", "https://ruadlist.googlecode.com/hg/advblock.txt")
                          << Subscription("ABPindo (Indonesian)", "https://indonesianadblockrules.googlecode.com/hg/subscriptions/abpindo.txt")
                          << Subscription("Easylist China (Chinese)", "https://easylist-downloads.adblockplus.org/easylistchina.txt")
+                         << Subscription("Anti-Adblock Killer", "https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt")
                          << Subscription(tr("Other..."), QString());
 
     foreach (const Subscription &subscription, m_knownSubscriptions) {

@@ -44,11 +44,12 @@ public:
         QUrl url;
         QIcon icon;
         QByteArray history;
+        bool isPinned;
 
-        SavedTab() { }
+        SavedTab();
         SavedTab(WebTab* webTab);
 
-        bool isEmpty() const;
+        bool isValid() const;
         void clear();
 
         friend QUPZILLA_EXPORT QDataStream &operator<<(QDataStream &stream, const SavedTab &tab);
@@ -83,7 +84,9 @@ public:
     int tabIndex() const;
 
     bool isCurrentTab() const;
+
     void showWebInspector();
+    void toggleWebInspector();
 
     bool isRestored() const;
     void restoreTab(const SavedTab &tab);

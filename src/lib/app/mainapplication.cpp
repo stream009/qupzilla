@@ -209,13 +209,15 @@ MainApplication::MainApplication(int &argc, char** argv)
             appId.append(QLatin1String("Portable"));
         }
 
-        // TODO: This should generate some random string for appId
         if (newInstance) {
             if (startProfile.isEmpty() || startProfile == QLatin1String("default")) {
                 std::cout << "New instance cannot be started with default profile!" << std::endl;
             }
             else {
-                appId.append(startProfile);
+                // Generate unique appId so it is possible to start more separate instances
+                // of the same profile. It is dangerous to run more instances of the same profile,
+                // but if the user wants it, we should allow it.
+                appId.append(startProfile + QString::number(QDateTime::currentMSecsSinceEpoch()));
             }
         }
 
@@ -289,6 +291,9 @@ MainApplication::MainApplication(int &argc, char** argv)
             m_restoreManager = new RestoreManager();
             if (!m_restoreManager->isValid()) {
                 destroyRestoreManager();
+            } else {
+                // Pinned tabs are saved into session.dat, so remove the old saved pinned tabs
+                QFile::remove(DataPaths::currentProfilePath() + QL1S("/pinnedtabs.dat"));
             }
         }
     }
@@ -454,7 +459,10 @@ void MainApplication::setProxyStyle(ProxyStyle* style)
 
 QString MainApplication::styleName() const
 {
-    return m_proxyStyle ? m_proxyStyle->baseStyle()->objectName() : QString();
+    if (m_proxyStyle && m_proxyStyle->baseStyle())
+        return m_proxyStyle->baseStyle()->objectName();
+
+    return style()->objectName();
 }
 
 QString MainApplication::currentLanguageFile() const
@@ -721,9 +729,14 @@ void MainApplication::saveSession()
         }
     }
 
-    BrowserWindow* qupzilla_ = getWindow();
-    if (qupzilla_ && m_windows.count() == 1) {
-        qupzilla_->tabWidget()->savePinnedTabs();
+    int afterLaunch = Settings().value("Web-URL-Settings/afterLaunch", 3).toInt();
+
+    if (afterLaunch != 3) {
+        // Pinned tabs are saved only for last window into pinnedtabs.dat
+        BrowserWindow* qupzilla_ = getWindow();
+        if (qupzilla_ && m_windows.count() == 1) {
+            qupzilla_->tabWidget()->savePinnedTabs();
+        }
     }
 
     QFile file(DataPaths::currentProfilePath() + QLatin1String("/session.dat"));

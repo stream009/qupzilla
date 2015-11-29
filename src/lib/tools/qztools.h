@@ -73,6 +73,8 @@ public:
     static QIcon iconFromFileName(const QString &fileName);
     static bool isUtf8(const char* string);
 
+    static bool containsSpace(const QString &str);
+
     // QFileDialog static functions that remembers last used directory
     static QString getExistingDirectory(const QString &name, QWidget* parent = 0, const QString &caption = QString(), const QString &dir = QString(), QFileDialog::Options options = QFileDialog::ShowDirsOnly);
     static QString getOpenFileName(const QString &name, QWidget* parent = 0, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString* selectedFilter = 0, QFileDialog::Options options = 0);
@@ -87,7 +89,7 @@ public:
     static bool isCertificateValid(const QSslCertificate &cert);
     static QString escape(const QString &string);
 
-    static void* X11Display(const QWidget* widget);
+    static bool isPlatformX11();
     static void setWmClass(const QString &name, const QWidget* widget);
 
     template <typename T>
