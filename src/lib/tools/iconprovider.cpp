@@ -169,7 +169,7 @@ QImage IconProvider::imageForUrl(const QUrl &url)
     }
 
     QSqlQuery query;
-    query.prepare(QSL("SELECT icon FROM icons WHERE url LIKE ? ESCAPE ? LIMIT 1"));
+    query.prepare(QSL("SELECT icon FROM icons WHERE ROWID = (select ROWID from icons WHERE url LIKE ? ESCAPE ? LIMIT 1)"));
 
     query.addBindValue(QString("%1%").arg(QzTools::escapeSqlString(QString::fromUtf8(url.toEncoded(QUrl::RemoveFragment)))));
     query.addBindValue(QL1S("!"));
