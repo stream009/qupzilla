@@ -36,8 +36,6 @@ DownloadOptionsDialog::DownloadOptionsDialog(const QString &fileName, const QPix
 
     setFixedHeight(sizeHint().height());
 
-    ui->buttonBox->setFocus();
-
     connect(ui->copyDownloadLink, SIGNAL(clicked(QPoint)), this, SLOT(copyDownloadLink()));
     connect(this, SIGNAL(finished(int)), this, SLOT(emitDialogFinished(int)));
 }
