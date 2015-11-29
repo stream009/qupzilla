@@ -66,8 +66,6 @@ void AdBlockIcon::popupBlocked(const QString &ruleString, const QUrl &url)
     pair.second = url;
     m_blockedPopups.append(pair);
 
-    mApp->desktopNotifications()->showNotification(QPixmap(":html/adblock_big.png"), tr("Blocked popup window"), tr("AdBlock blocked unwanted popup window."));
-
     if (!m_flashTimer) {
         m_flashTimer = new QTimer(this);
     }
