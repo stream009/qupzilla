@@ -1036,7 +1036,7 @@ void WebView::createLinkContextMenu(QMenu* menu, const QWebHitTestResult &hitTes
     menu->addSeparator();
 
     QVariantList bData;
-    bData << hitTest.linkUrl() << hitTest.linkTitle();
+    bData << hitTest.linkUrl() << hitTest.linkText();
     menu->addAction(QIcon::fromTheme("bookmark-new"), tr("B&ookmark link"), this, SLOT(bookmarkLink()))->setData(bData);
 
     menu->addAction(QIcon::fromTheme("document-save"), tr("&Save link as..."), this, SLOT(downloadUrlToDisk()))->setData(hitTest.linkUrl());
