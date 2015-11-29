@@ -76,18 +76,24 @@ void History::addHistoryEntry(const QUrl &url, QString title)
         return;
     }
 
+    if (url.host().contains("google") && url.path().startsWith("/search")) {
+        return;
+    }
+
     if (title.isEmpty()) {
         title = tr("Empty Page");
     }
 
+    const QUrl url2(url.toString(QUrl::RemoveFragment));
+
     QSqlQuery query;
     query.prepare("SELECT id, count, date, title FROM history WHERE url=?");
-    query.bindValue(0, url);
+    query.bindValue(0, url2);
     query.exec();
     if (!query.next()) {
         query.prepare("INSERT INTO history (count, date, url, title) VALUES (1,?,?,?)");
         query.bindValue(0, QDateTime::currentMSecsSinceEpoch());
-        query.bindValue(1, url);
+        query.bindValue(1, url2);
         query.bindValue(2, title);
         query.exec();
 
@@ -96,8 +102,8 @@ void History::addHistoryEntry(const QUrl &url, QString title)
         entry.id = id;
         entry.count = 1;
         entry.date = QDateTime::currentDateTime();
-        entry.url = url;
-        entry.urlString = url.toEncoded();
+        entry.url = url2;
+        entry.urlString = url2.toEncoded();
         entry.title = title;
         emit historyEntryAdded(entry);
     }
@@ -110,15 +116,15 @@ void History::addHistoryEntry(const QUrl &url, QString title)
         query.prepare("UPDATE history SET count = count + 1, date=?, title=? WHERE url=?");
         query.bindValue(0, QDateTime::currentMSecsSinceEpoch());
         query.bindValue(1, title);
-        query.bindValue(2, url);
+        query.bindValue(2, url2);
         query.exec();
 
         HistoryEntry before;
         before.id = id;
         before.count = count;
         before.date = date;
-        before.url = url;
-        before.urlString = url.toEncoded();
+        before.url = url2;
+        before.urlString = url2.toEncoded();
         before.title = oldTitle;
 
         HistoryEntry after = before;
