@@ -88,7 +88,7 @@ QtLocalPeer::QtLocalPeer(QObject* parent, const QString &appId)
     prefix.truncate(6);
 
     QByteArray idc = id.toUtf8();
-    quint16 idNum = qChecksum(idc.constData(), idc.size());
+    quint16 idNum = qChecksum(idc.constData(), static_cast<uint>(idc.size()));
     socketName = QLatin1String("qtsingleapp-") + prefix
                  + QLatin1Char('-') + QString::number(idNum, 16);
 
@@ -171,7 +171,7 @@ bool QtLocalPeer::sendMessage(const QString &message, int timeout)
 
     QByteArray uMsg(message.toUtf8());
     QDataStream ds(&socket);
-    ds.writeBytes(uMsg.constData(), uMsg.size());
+    ds.writeBytes(uMsg.constData(), static_cast<uint>(uMsg.size()));
     bool res = socket.waitForBytesWritten(timeout);
     res &= socket.waitForReadyRead(timeout);   // wait for ack
     res &= (socket.read(qstrlen(ack)) == ack);
@@ -190,19 +190,19 @@ void QtLocalPeer::receiveConnection()
         return;
     }
 
-    while (socket->bytesAvailable() < (int)sizeof(quint32)) {
+    while (socket->bytesAvailable() < static_cast<int>(sizeof(quint32))) {
         socket->waitForReadyRead();
     }
     QDataStream ds(socket);
     QByteArray uMsg;
     quint32 remaining;
     ds >> remaining;
-    uMsg.resize(remaining);
+    uMsg.resize(static_cast<int>(remaining));
     int got = 0;
     char* uMsgBuf = uMsg.data();
     do {
-        got = ds.readRawData(uMsgBuf, remaining);
-        remaining -= got;
+        got = ds.readRawData(uMsgBuf, static_cast<int>(remaining));
+        remaining -= static_cast<unsigned int>(got);
         uMsgBuf += got;
     }
     while (remaining && got >= 0 && socket->waitForReadyRead(2000));
