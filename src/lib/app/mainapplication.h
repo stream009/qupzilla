@@ -21,6 +21,7 @@
 #define mApp MainApplication::instance()
 
 #include <QList>
+#include <QPointer>
 
 #include "qtsingleapplication/qtsingleapplication.h"
 #include "restoremanager.h"
@@ -36,7 +37,6 @@ class Bookmarks;
 class CookieJar;
 class AutoSaver;
 class RSSManager;
-class ProxyStyle;
 class PluginProxy;
 class BrowserWindow;
 class NetworkManager;
@@ -71,9 +71,6 @@ public:
     bool restoreSession(BrowserWindow* window, RestoreData restoreData);
     void destroyRestoreManager();
     void reloadSettings();
-
-    ProxyStyle* proxyStyle() const;
-    void setProxyStyle(ProxyStyle* style);
 
     // Name of current Qt style
     QString styleName() const;
@@ -124,6 +121,7 @@ private slots:
     void messageReceived(const QString &message);
     void windowDestroyed(QObject* window);
     void onFocusChanged();
+    void checkDefaultWebBrowser();
 
 private:
     enum PostLaunchAction {
@@ -137,7 +135,6 @@ private:
 
     void translateApp();
     void backupSavedSessions();
-    void checkDefaultWebBrowser();
 
     QUrl userStyleSheet(const QString &filePath) const;
 
@@ -166,10 +163,9 @@ private:
     DesktopNotificationsFactory* m_desktopNotifications;
 
     AutoSaver* m_autoSaver;
-    ProxyStyle* m_proxyStyle;
 
     QList<BrowserWindow*> m_windows;
-    BrowserWindow* m_lastActiveWindow;
+    QPointer<BrowserWindow> m_lastActiveWindow;
 
     QList<PostLaunchAction> m_postLaunchActions;
 

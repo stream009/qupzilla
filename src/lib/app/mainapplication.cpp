@@ -95,8 +95,6 @@ MainApplication::MainApplication(int &argc, char** argv)
     , m_html5PermissionsManager(0)
     , m_desktopNotifications(0)
     , m_autoSaver(0)
-    , m_proxyStyle(0)
-    , m_lastActiveWindow(0)
 #if defined(Q_OS_WIN) && !defined(Q_OS_OS2)
     , m_registerQAppAssociation(0)
 #endif
@@ -358,7 +356,7 @@ QList<BrowserWindow*> MainApplication::windows() const
 BrowserWindow* MainApplication::getWindow() const
 {
     if (m_lastActiveWindow) {
-        return m_lastActiveWindow;
+        return m_lastActiveWindow.data();
     }
 
     return m_windows.isEmpty() ? 0 : m_windows.first();
@@ -445,24 +443,10 @@ void MainApplication::reloadSettings()
     emit settingsReloaded();
 }
 
-ProxyStyle* MainApplication::proxyStyle() const
-{
-    return m_proxyStyle;
-}
-
-void MainApplication::setProxyStyle(ProxyStyle* style)
-{
-    m_proxyStyle = style;
-
-    QApplication::setStyle(style);
-}
-
 QString MainApplication::styleName() const
 {
-    if (m_proxyStyle && m_proxyStyle->baseStyle())
-        return m_proxyStyle->baseStyle()->objectName();
-
-    return style()->objectName();
+    QProxyStyle *proxyStyle = qobject_cast<QProxyStyle*>(style());
+    return proxyStyle ? proxyStyle->baseStyle()->objectName() : style()->objectName();
 }
 
 QString MainApplication::currentLanguageFile() const
@@ -703,8 +687,9 @@ void MainApplication::postLaunch()
     connect(this, SIGNAL(messageReceived(QString)), this, SLOT(messageReceived(QString)));
     connect(this, SIGNAL(aboutToQuit()), this, SLOT(saveSettings()));
 
-    checkDefaultWebBrowser();
     QtWin::createJumpList();
+
+    QTimer::singleShot(1000, this, SLOT(checkDefaultWebBrowser()));
 }
 
 void MainApplication::saveSession()
