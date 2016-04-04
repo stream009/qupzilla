@@ -19,6 +19,10 @@
 #include "kwalletplugin.h"
 
 #include <QDateTime>
+#include <QWidget>
+
+#include "browserwindow.h"
+#include "mainapplication.h"
 
 static PasswordEntry decodeEntry(const QByteArray &data)
 {
@@ -148,7 +152,9 @@ void KWalletPasswordBackend::initialize()
         return;
     }
 
-    m_wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), 0);
+    BrowserWindow* const window = mApp->getWindow();
+    const WId wId = window ? window->effectiveWinId() : 0;
+    m_wallet = KWallet::Wallet::openWallet( KWallet::Wallet::NetworkWallet(), wId);
 
     if (!m_wallet) {
         qWarning() << "KWalletPasswordBackend::initialize Cannot open wallet!";
