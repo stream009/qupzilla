@@ -146,6 +146,106 @@ WebPage* WebView::page() const
     return m_page;
 }
 
+class DefaultPalette : public QPalette
+{
+public:
+    DefaultPalette()
+    {
+        // Active
+        this->setColor(Active, Window, QColor(239, 240, 241));
+        this->setColor(Active, WindowText, QColor(49, 54, 59));
+        this->setColor(Active, Base, QColor(252, 252, 252));
+        this->setColor(Active, AlternateBase, QColor(239, 240, 241));
+        this->setColor(Active, ToolTipBase, QColor(49, 54, 59));
+        this->setColor(Active, ToolTipText, QColor(239, 240, 241));
+        this->setColor(Active, Text, QColor(49, 54, 59));
+        this->setColor(Active, Button, QColor(239, 240, 241));
+        this->setColor(Active, ButtonText, QColor(49, 54, 59));
+        this->setColor(Active, BrightText, QColor(255, 255, 255));
+
+        this->setColor(Active, Light, QColor(255, 255, 255));
+        this->setColor(Active, Midlight, QColor(250, 250, 250));
+        this->setColor(Active, Dark, QColor(113, 117, 122));
+        this->setColor(Active, Mid, QColor(189, 194, 198));
+        this->setColor(Active, Shadow, QColor(58, 61, 63));
+
+        this->setColor(Active, Highlight, QColor(61, 174, 233));
+        this->setColor(Active, HighlightedText, QColor(239, 240, 241));
+
+        this->setColor(Active, Link, QColor(41, 128, 185));
+        this->setColor(Active, LinkVisited, QColor(127, 140, 141));
+
+        this->setColor(Active, NoRole, QColor(49, 54, 59));
+
+        // Inactive
+        this->setColor(Inactive, Window, QColor(239, 240, 241));
+        this->setColor(Inactive, WindowText, QColor(49, 54, 59));
+        this->setColor(Inactive, Base, QColor(252, 252, 252));
+        this->setColor(Inactive, AlternateBase, QColor(239, 240, 241));
+        this->setColor(Inactive, ToolTipBase, QColor(49, 54, 59));
+        this->setColor(Inactive, ToolTipText, QColor(239, 240, 241));
+        this->setColor(Inactive, Text, QColor(49, 54, 59));
+        this->setColor(Inactive, Button, QColor(239, 240, 241));
+        this->setColor(Inactive, ButtonText, QColor(49, 54, 59));
+        this->setColor(Inactive, BrightText, QColor(255, 255, 255));
+
+        this->setColor(Inactive, Light, QColor(255, 255, 255));
+        this->setColor(Inactive, Midlight, QColor(250, 250, 250));
+        this->setColor(Inactive, Dark, QColor(113, 117, 122));
+        this->setColor(Inactive, Mid, QColor(189, 194, 198));
+        this->setColor(Inactive, Shadow, QColor(58, 61, 63));
+
+        this->setColor(Inactive, Highlight, QColor(194, 224, 245));
+        this->setColor(Inactive, HighlightedText, QColor(49, 54, 59));
+
+        this->setColor(Inactive, Link, QColor(41, 128, 185));
+        this->setColor(Inactive, LinkVisited, QColor(127, 140, 141));
+
+        // Disabled
+        this->setColor(Disabled, Window, QColor(227, 229, 231));
+        this->setColor(Disabled, WindowText, QColor(165, 167, 169));
+        this->setColor(Disabled, Base, QColor(241, 241, 241));
+        this->setColor(Disabled, AlternateBase, QColor(227, 229, 231));
+        this->setColor(Disabled, ToolTipBase, QColor(49, 54, 59));
+        this->setColor(Disabled, ToolTipText, QColor(239, 240, 241));
+        this->setColor(Disabled, Text, QColor(172, 174, 176));
+        this->setColor(Disabled, Button, QColor(227, 229, 231));
+        this->setColor(Disabled, ButtonText, QColor(165, 167, 169));
+        this->setColor(Disabled, BrightText, QColor(255, 255, 255));
+
+        this->setColor(Disabled, Light, QColor(255, 255, 255));
+        this->setColor(Disabled, Midlight, QColor(239, 240, 241));
+        this->setColor(Disabled, Dark, QColor(107, 112, 116));
+        this->setColor(Disabled, Mid, QColor(180, 186, 191));
+        this->setColor(Disabled, Shadow, QColor(58, 61, 63));
+
+        this->setColor(Disabled, Highlight, QColor(227, 229, 231));
+        this->setColor(Disabled, HighlightedText, QColor(165, 167, 169));
+
+        this->setColor(Disabled, Link, QColor(162, 200, 224));
+        this->setColor(Disabled, LinkVisited, QColor(199, 203, 203));
+    }
+};
+
+static QPalette defaultWebPagePalette()
+{
+    static DefaultPalette palette;
+#if 0
+    static QPalette palette(
+        QColor( 49,  54,  59), // windowText
+        QColor(239, 240, 241), // button
+        QColor(255, 255, 255), // light
+        QColor(113, 117, 122), // dark
+        QColor(250, 250, 250), // mid
+        QColor( 49,  54,  59), // text
+        QColor(255, 255, 255), // bright_text
+        QColor(252, 252, 252), // base
+        QColor(239, 240, 241)  // window
+    );
+#endif
+    return palette;
+}
+
 void WebView::setPage(QWebPage* page)
 {
     if (m_page == page) {
@@ -171,6 +271,7 @@ void WebView::setPage(QWebPage* page)
     //QPalette pal = palette();
     //pal.setBrush(QPalette::Base, Qt::white);
     //page->setPalette(pal);
+    this->setPalette(defaultWebPagePalette());
 }
 
 void WebView::load(const LoadRequest &request)
