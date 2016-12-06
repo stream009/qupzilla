@@ -32,6 +32,8 @@
 #include "tabicon.h"
 #include "qtwin.h"
 
+#include <cassert>
+
 #include <QFile>
 #include <QTimer>
 #include <QMimeData>
@@ -353,27 +355,46 @@ int TabWidget::addView(const LoadRequest &req, const QString &title, const Qz::N
         }
     }
 
-    WebTab* webTab = new WebTab(m_window);
-    webTab->locationBar()->showUrl(url);
-    m_locationBars->addWidget(webTab->locationBar());
+    WebTab* webTab = nullptr;
+    int index = currentIndex();
+    auto* const currentTab = weTab();
 
-    int index = insertTab(position == -1 ? count() : position, webTab, QString(), pinned);
-    webTab->attach(m_window);
+    auto isEmpty = [&](WebTab& tab) {
+        auto const& url = tab.webView()->url();
+        return url.isEmpty() || url == m_urlOnNewTab;
+    };
 
-    if (!title.isEmpty()) {
-        m_tabBar->setTabText(index, title);
-    }
-
-    if (openFlags & Qz::NT_SelectedTab) {
-        setCurrentIndex(index);
+    if (url != m_urlOnNewTab && currentTab && isEmpty(*currentTab)) {
+        webTab = currentTab;
     }
     else {
-        m_lastBackgroundTabIndex = index;
-    }
+        webTab = new WebTab(m_window);
+        webTab->locationBar()->showUrl(url);
+        m_locationBars->addWidget(webTab->locationBar());
 
-    connect(webTab->webView(), SIGNAL(wantsCloseTab(int)), this, SLOT(closeTab(int)));
-    connect(webTab->webView(), SIGNAL(changed()), this, SIGNAL(changed()));
-    connect(webTab->webView(), SIGNAL(ipChanged(QString)), m_window->ipLabel(), SLOT(setText(QString)));
+        index = insertTab(
+            position == -1 ? count() : position, webTab, QString(), pinned);
+        webTab->attach(m_window);
+
+        if (!title.isEmpty()) {
+            m_tabBar->setTabText(index, title);
+        }
+
+        if (openFlags & Qz::NT_SelectedTab) {
+            setCurrentIndex(index);
+        }
+        else {
+            m_lastBackgroundTabIndex = index;
+        }
+
+        connect(webTab->webView(), SIGNAL(wantsCloseTab(int)),
+                             this, SLOT(closeTab(int)));
+        connect(webTab->webView(), SIGNAL(changed()),
+                             this, SIGNAL(changed()));
+        connect(webTab->webView(), SIGNAL(ipChanged(QString)),
+              m_window->ipLabel(), SLOT(setText(QString)));
+    }
+    assert(webTab);
 
     if (url.isValid() && url != req.url()) {
         LoadRequest r(req);
