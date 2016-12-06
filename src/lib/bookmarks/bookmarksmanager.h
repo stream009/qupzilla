@@ -82,10 +82,8 @@ private:
     QPointer<BrowserWindow> m_window;
 
     Bookmarks* m_bookmarks;
-    BookmarkItem* m_selectedBookmark;
     bool m_blockDescriptionChangedSignal;
     bool m_adjustHeaderSizesOnShow;
-
 };
 
 #endif // BOOKMARKSMANAGER_H

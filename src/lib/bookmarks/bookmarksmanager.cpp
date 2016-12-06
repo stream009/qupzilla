@@ -26,6 +26,8 @@
 #include "iconprovider.h"
 #include "qztools.h"
 
+#include <cassert>
+
 #include <QMenu>
 #include <QTimer>
 
@@ -34,7 +36,6 @@ BookmarksManager::BookmarksManager(BrowserWindow* window, QWidget* parent)
     , ui(new Ui::BookmarksManager)
     , m_window(window)
     , m_bookmarks(mApp->bookmarks())
-    , m_selectedBookmark(0)
     , m_blockDescriptionChangedSignal(false)
     , m_adjustHeaderSizesOnShow(true)
 {
@@ -90,12 +91,10 @@ void BookmarksManager::bookmarkShiftActivated(BookmarkItem* item)
 void BookmarksManager::bookmarksSelected(const QList<BookmarkItem*> &items)
 {
     if (items.size() != 1) {
-        m_selectedBookmark = 0;
         updateEditBox(0);
     }
     else {
-        m_selectedBookmark = items.first();
-        updateEditBox(m_selectedBookmark);
+        updateEditBox(items.first());
     }
 }
 
@@ -118,13 +117,18 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
     connect(actNewPrivateWindow, SIGNAL(triggered()), this, SLOT(openBookmarkInNewPrivateWindow()));
     connect(actDelete, SIGNAL(triggered()), this, SLOT(deleteBookmarks()));
 
-    bool canBeDeleted = false;
+    bool canBeDeleted = false, canBeOpened = false;
+
     QList<BookmarkItem*> items = ui->tree->selectedBookmarks();
 
     foreach (BookmarkItem* item, items) {
-        if (m_bookmarks->canBeModified(item)) {
+        if (!canBeDeleted && m_bookmarks->canBeModified(item)) {
             canBeDeleted = true;
-            break;
+        }
+
+        if (!canBeOpened) {
+            assert(item);
+            canBeOpened = item->isUrl() || item->isFolder();
         }
     }
 
@@ -132,7 +136,7 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
         actDelete->setDisabled(true);
     }
 
-    if (!m_selectedBookmark || !m_selectedBookmark->isUrl()) {
+    if (!canBeOpened) {
         actNewTab->setDisabled(true);
         actNewWindow->setDisabled(true);
         actNewPrivateWindow->setDisabled(true);
@@ -141,28 +145,57 @@ void BookmarksManager::createContextMenu(const QPoint &pos)
     menu.exec(pos);
 }
 
-void BookmarksManager::openBookmark(BookmarkItem* item)
+void BookmarksManager::openBookmark(BookmarkItem* const i)
 {
-    item = item ? item : m_selectedBookmark;
+    auto* const item = i ? i : ui->tree->selectedBookmark();
+    assert(item);
+
     BookmarksTools::openBookmark(getQupZilla(), item);
 }
 
-void BookmarksManager::openBookmarkInNewTab(BookmarkItem* item)
+void BookmarksManager::openBookmarkInNewTab(BookmarkItem* const item)
 {
-    item = item ? item : m_selectedBookmark;
-    BookmarksTools::openBookmarkInNewTab(getQupZilla(), item);
+    auto* const window = getQupZilla();
+    assert(window);
+
+    if (item) {
+        BookmarksTools::openBookmarkInNewTab(window, item);
+    }
+    else {
+        for (auto* const item: ui->tree->selectedBookmarks()) {
+            assert(item);
+
+            BookmarksTools::openBookmarkInNewTab(window, item);
+        }
+    }
 }
 
-void BookmarksManager::openBookmarkInNewWindow(BookmarkItem* item)
+void BookmarksManager::openBookmarkInNewWindow(BookmarkItem* const item)
 {
-    item = item ? item : m_selectedBookmark;
-    BookmarksTools::openBookmarkInNewWindow(item);
+    if (item) {
+        BookmarksTools::openBookmarkInNewWindow(item);
+    }
+    else {
+        for (auto* const item: ui->tree->selectedBookmarks()) {
+            assert(item);
+
+            BookmarksTools::openBookmarkInNewWindow(item);
+        }
+    }
 }
 
-void BookmarksManager::openBookmarkInNewPrivateWindow(BookmarkItem* item)
+void BookmarksManager::openBookmarkInNewPrivateWindow(BookmarkItem* const item)
 {
-    item = item ? item : m_selectedBookmark;
-    BookmarksTools::openBookmarkInNewPrivateWindow(item);
+    if (item) {
+        BookmarksTools::openBookmarkInNewPrivateWindow(item);
+    }
+    else {
+        for (auto* const item: ui->tree->selectedBookmarks()) {
+            assert(item);
+
+            BookmarksTools::openBookmarkInNewPrivateWindow(item);
+        }
+    }
 }
 
 void BookmarksManager::addBookmark()
@@ -307,15 +340,17 @@ void BookmarksManager::addBookmark(BookmarkItem* item)
 
 BookmarkItem* BookmarksManager::parentForNewBookmark() const
 {
-    if (m_selectedBookmark && m_selectedBookmark->isFolder()) {
-        return m_selectedBookmark;
+    auto* const selectedBookmark = ui->tree->selectedBookmark();
+
+    if (selectedBookmark && selectedBookmark->isFolder()) {
+        return selectedBookmark;
     }
 
-    if (!m_selectedBookmark || m_selectedBookmark->parent() == m_bookmarks->rootItem()) {
+    if (!selectedBookmark || selectedBookmark->parent() == m_bookmarks->rootItem()) {
         return m_bookmarks->unsortedFolder();
     }
 
-    return m_selectedBookmark->parent();
+    return selectedBookmark->parent();
 }
 
 void BookmarksManager::keyPressEvent(QKeyEvent* event)
