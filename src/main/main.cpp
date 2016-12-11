@@ -159,12 +159,13 @@ void msgHandler(QtMsgType type, const QMessageLogContext &context, const QString
 int main(int argc, char* argv[])
 {
     QT_REQUIRE_VERSION(argc, argv, "4.7.0");
-
+#if 0
 #ifndef Q_OS_WIN
 #if (QT_VERSION < 0x050000)
     qInstallMsgHandler(&msgHandler);
 #else
     qInstallMessageHandler(&msgHandler);
+#endif
 #endif
 #endif
 
