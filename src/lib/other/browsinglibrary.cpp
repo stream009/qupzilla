@@ -26,8 +26,10 @@
 #include "qztools.h"
 #include "settings.h"
 
-#include <QMenu>
+#include <QApplication>
 #include <QCloseEvent>
+#include <QDesktopWidget>
+#include <QMenu>
 
 BrowsingLibrary::BrowsingLibrary(BrowserWindow* window, QWidget* parent)
     : QWidget(parent)
@@ -41,11 +43,18 @@ BrowsingLibrary::BrowsingLibrary(BrowserWindow* window, QWidget* parent)
 
     Settings settings;
     settings.beginGroup("BrowsingLibrary");
+
     resize(settings.value("size", QSize(760, 470)).toSize());
     m_historyManager->restoreState(settings.value("historyState", QByteArray()).toByteArray());
+
+    this->restoreGeometry(settings.value("geometry").toByteArray());
+
     settings.endGroup();
 
-    QzTools::centerWidgetOnScreen(this);
+    auto* const desktop = QApplication::desktop();
+    if (!desktop || !desktop->screenGeometry().intersects(this->geometry())) {
+        QzTools::centerWidgetOnScreen(this);
+    }
 
     ui->tabs->AddTab(m_historyManager, QIcon(":/icons/other/bighistory.png"), tr("History"));
     ui->tabs->AddTab(m_bookmarksManager, QIcon(":/icons/other/bigstar.png"), tr("Bookmarks"));
@@ -153,6 +162,10 @@ void BrowsingLibrary::closeEvent(QCloseEvent* e)
     settings.beginGroup("BrowsingLibrary");
     settings.setValue("size", size());
     settings.setValue("historyState", m_historyManager->saveState());
+
+    qDebug() << this->geometry();
+    settings.setValue("geometry", this->saveGeometry());
+
     settings.endGroup();
     e->accept();
 
