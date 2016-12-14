@@ -25,7 +25,86 @@
 #include "qztools.h"
 #include "json.h"
 
+#include <cassert>
+
 #include <QFile>
+
+static QString
+encodeTitle(QString const& title)
+{
+    auto result = title;
+
+    result.replace("%", "%25");
+    result.replace("/", "%27");
+
+    return result;
+}
+
+static QString
+decodeTitle(QString const& title)
+{
+    auto result = title;
+
+    result.replace("%27", "/");
+    result.replace("%25", "%");
+
+    return result;
+}
+
+static QString
+folderPath(BookmarkItem const& lastFolder)
+{
+    if (lastFolder.type() != BookmarkItem::Folder) return {};
+
+    auto result = lastFolder.title();
+
+    auto* folder = lastFolder.parent();
+    assert(folder);
+
+    while (folder->type() != BookmarkItem::Root) {
+        auto const title = encodeTitle(folder->title());
+        result = title + "/" + result;
+
+        folder = folder->parent();
+        assert(folder);
+    }
+
+    return result;
+}
+
+static BookmarkItem*
+findFirstFolder(BookmarkItem& folder, QString const& title)
+{
+    for (auto* const item: folder.children()) {
+        assert(item);
+
+        if (item->type() != BookmarkItem::Folder) continue;
+
+        if (item->title() == title) {
+            return item;
+        }
+    }
+
+    return nullptr;
+}
+
+static BookmarkItem*
+searchFolderByPath(BookmarkItem& root, QString const& path)
+{
+    auto* folder = &root;
+    BookmarkItem* result = nullptr;
+
+    for (auto const& title: path.split("/")) {
+        auto* const child = findFirstFolder(*folder, decodeTitle(title));
+
+        if (!child) break;
+
+        folder = child;
+        result = child;
+    }
+
+    return result;
+}
 
 Bookmarks::Bookmarks(QObject* parent)
     : QObject(parent)
@@ -40,7 +119,7 @@ Bookmarks::Bookmarks(QObject* parent)
 
 Bookmarks::~Bookmarks()
 {
-    m_autoSaver->saveIfNecessary();
+    saveSettings();
     delete m_root;
 }
 
@@ -48,7 +127,17 @@ void Bookmarks::loadSettings()
 {
     Settings settings;
     settings.beginGroup("Bookmarks");
+
     m_showOnlyIconsInToolbar = settings.value("showOnlyIconsInToolbar", false).toBool();
+
+    auto const& path = settings.value("lastFolder", "").toString();
+    if (!path.isEmpty()) {
+        auto* const item = searchFolderByPath(*m_root, path);
+        if (item) {
+            m_lastFolder = item;
+        }
+    }
+
     settings.endGroup();
 }
 
@@ -179,6 +268,13 @@ void Bookmarks::saveSettings()
     Settings settings;
     settings.beginGroup("Bookmarks");
     settings.setValue("showOnlyIconsInToolbar", m_showOnlyIconsInToolbar);
+
+    assert(m_lastFolder);
+    auto const& path = folderPath(*m_lastFolder);
+    if (!path.isEmpty()) {
+        settings.setValue("lastFolder", path);
+    }
+
     settings.endGroup();
 
     saveBookmarks();
