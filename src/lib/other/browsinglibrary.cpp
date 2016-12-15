@@ -163,7 +163,6 @@ void BrowsingLibrary::closeEvent(QCloseEvent* e)
     settings.setValue("size", size());
     settings.setValue("historyState", m_historyManager->saveState());
 
-    qDebug() << this->geometry();
     settings.setValue("geometry", this->saveGeometry());
 
     settings.endGroup();
