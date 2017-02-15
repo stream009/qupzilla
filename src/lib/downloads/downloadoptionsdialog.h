@@ -52,6 +52,10 @@ signals:
     void dialogFinished(int);
 
 private:
+    // @override QWidget
+    void showEvent(QShowEvent*) override;
+
+private:
     Ui::DownloadOptionsDialog* ui;
 
     QUrl m_url;

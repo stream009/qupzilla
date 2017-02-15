@@ -123,3 +123,17 @@ DownloadOptionsDialog::~DownloadOptionsDialog()
 
     delete ui;
 }
+
+void DownloadOptionsDialog::
+showEvent(QShowEvent* const)
+{
+    if (ui->radioOpen->isChecked()) {
+        ui->radioOpen->setFocus();
+    }
+    else if (ui->radioSave->isChecked()) {
+        ui->radioSave->setFocus();
+    }
+    else if (ui->radioExternal->isChecked()) {
+        ui->radioExternal->setFocus();
+    }
+}

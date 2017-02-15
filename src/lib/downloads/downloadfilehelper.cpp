@@ -27,6 +27,7 @@
 #include "datapaths.h"
 #include "settings.h"
 #include "qzregexp.h"
+#include "pluginproxy.h"
 
 #include <QFileIconProvider>
 #include <QListWidgetItem>
@@ -39,6 +40,8 @@
 #else
 #include <QDesktopServices>
 #endif
+
+#include <cassert>
 
 DownloadFileHelper::DownloadFileHelper(const QString &lastDownloadPath, const QString &downloadPath, bool useNativeDialog)
     : QObject()
@@ -63,12 +66,21 @@ DownloadFileHelper::DownloadFileHelper(const QString &lastDownloadPath, const QS
 //// on Windows working properly )
 //////////////////////////////////////////////////////
 
-void DownloadFileHelper::handleUnsupportedContent(QNetworkReply* reply, const DownloadManager::DownloadInfo &info)
+void DownloadFileHelper::handleUnsupportedContent(QNetworkReply* reply, const DownloadManager::DownloadInfo &info_)
 {
+    DownloadManager::DownloadInfo info = info_;
+
     m_timer = new QTime();
     m_timer->start();
     m_h_fileName = info.suggestedFileName.isEmpty() ? getFileName(reply) : info.suggestedFileName;
     m_reply = reply;
+
+    assert(mApp);
+    auto* const plugins = mApp->plugins();
+    assert(plugins);
+    assert(reply);
+    info.suggestedFileName = m_h_fileName;
+    plugins->processAboutToDownload(*reply, info);
 
     QFileInfo fileInfo(m_h_fileName);
     QTemporaryFile tempFile(DataPaths::path(DataPaths::Temp) + "/XXXXXX." + fileInfo.suffix());
@@ -100,10 +112,32 @@ void DownloadFileHelper::handleUnsupportedContent(QNetworkReply* reply, const Do
     if (info.askWhatToDo && m_downloadPath.isEmpty()) {
         DownloadOptionsDialog* dialog = new DownloadOptionsDialog(m_h_fileName, m_fileIcon, mimeType, reply->url(), mApp->activeWindow());
         dialog->showExternalManagerOption(m_manager->useExternalManager());
-        dialog->setLastDownloadOption(m_lastDownloadOption);
+
+        if (info.preferredOption == DownloadManager::NoOption) {
+            dialog->setLastDownloadOption(m_lastDownloadOption);
+        }
+        else {
+            dialog->setLastDownloadOption(info.preferredOption);
+        }
+
         dialog->show();
 
         connect(dialog, SIGNAL(dialogFinished(int)), this, SLOT(optionsDialogAccepted(int)));
+    }
+    else if (info.preferredOption != DownloadManager::NoOption) {
+        switch (info.preferredOption) {
+        case DownloadManager::OpenFile:
+            optionsDialogAccepted(1);
+            break;
+        case DownloadManager::SaveFile:
+            optionsDialogAccepted(2);
+            break;
+        case DownloadManager::ExternalManager:
+            optionsDialogAccepted(3);
+            break;
+        default:
+            assert(false && "Unknown DownloadOption");
+        }
     }
     else if (info.forceChoosingPath) {
         optionsDialogAccepted(4);

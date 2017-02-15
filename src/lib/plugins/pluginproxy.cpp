@@ -20,6 +20,8 @@
 #include "mainapplication.h"
 #include "settings.h"
 
+#include <cassert>
+
 #include <QMenu>
 
 PluginProxy::PluginProxy()
@@ -212,6 +214,16 @@ QNetworkReply* PluginProxy::createRequest(QNetworkAccessManager::Operation op, c
     }
 
     return 0;
+}
+
+void PluginProxy::
+processAboutToDownload(QNetworkReply const& reply,
+                       DownloadManager::DownloadInfo& info)
+{
+    for (auto* const plugin: m_loadedPlugins) {
+        assert(plugin);
+        plugin->aboutToDownload(reply, info);
+    }
 }
 
 void PluginProxy::emitWebPageCreated(WebPage* page)

@@ -52,6 +52,8 @@ public:
 
     QNetworkReply* createRequest(QNetworkAccessManager::Operation op, const QNetworkRequest &request, QIODevice* outgoingData);
 
+    void processAboutToDownload(QNetworkReply const&, DownloadManager::DownloadInfo&);
+
     void emitWebPageCreated(WebPage* page);
     void emitWebPageDeleted(WebPage* page);
 
