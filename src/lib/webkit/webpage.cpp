@@ -92,7 +92,7 @@ WebPage::WebPage(QObject* parent)
     connect(this, SIGNAL(loadFinished(bool)), this, SLOT(finished()));
     connect(this, SIGNAL(printRequested(QWebFrame*)), this, SLOT(printFrame(QWebFrame*)));
     connect(this, SIGNAL(downloadRequested(QNetworkRequest)), this, SLOT(downloadRequested(QNetworkRequest)));
-    connect(this, SIGNAL(windowCloseRequested()), this, SLOT(windowCloseRequested()));
+    //connect(this, SIGNAL(windowCloseRequested()), this, SLOT(windowCloseRequested()));
 
     frameCreated(mainFrame());
     connect(this, SIGNAL(frameCreated(QWebFrame*)), this, SLOT(frameCreated(QWebFrame*)));
@@ -454,7 +454,7 @@ void WebPage::windowCloseRequested()
         return;
     }
 
-    webView->closeView();
+    //webView->closeView();
 }
 
 void WebPage::frameCreated(QWebFrame* frame)
