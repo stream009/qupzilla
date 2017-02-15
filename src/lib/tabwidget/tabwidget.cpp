@@ -364,7 +364,9 @@ int TabWidget::addView(const LoadRequest &req, const QString &title, const Qz::N
         return url.isEmpty() || url == m_urlOnNewTab;
     };
 
-    if (url != m_urlOnNewTab && currentTab && isEmpty(*currentTab)) {
+    if (url != m_urlOnNewTab && !url.isEmpty() &&
+                  currentTab && isEmpty(*currentTab))
+    {
         webTab = currentTab;
     }
     else {
